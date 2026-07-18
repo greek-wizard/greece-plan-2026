@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Interaktywna checklista przygotowań do podróży po Atenach i Peloponezie we wrześniu 2026.">
+  <title>Checklista przygotowań | Grecja 2026</title>
+  <style>
+    :root{--navy:#102d33;--sea:#176f7c;--sand:#f3eee4;--sun:#ed9b45;--ink:#17363a;--muted:#687a7c;--white:#fffefa;--line:#d9e0dc;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--sand)}*{box-sizing:border-box}body{margin:0}.wrap{width:min(900px,calc(100% - 32px));margin:auto}.top{background:var(--navy);color:white;padding:58px 0 44px}.back{color:#c8dedf;text-decoration:none;font-weight:800}.top h1{font:clamp(2.6rem,7vw,5.5rem)/.95 Georgia,serif;margin:24px 0 12px}.top p{max-width:680px;color:#d8e6e5;line-height:1.6}.summary{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.pill{border:1px solid #ffffff44;border-radius:99px;padding:8px 12px}.progress{height:10px;background:#ffffff28;border-radius:99px;overflow:hidden;margin-top:18px}.progress span{display:block;height:100%;width:0;background:var(--sun);transition:width .25s}main{padding:42px 0 70px}.notice{background:#fff4e5;border-left:4px solid var(--sun);padding:15px 17px;border-radius:0 10px 10px 0;line-height:1.55;margin-bottom:30px}.group{background:var(--white);border:1px solid var(--line);border-radius:16px;margin:14px 0;overflow:hidden}.group h2{font:1.55rem Georgia,serif;margin:0;padding:20px 20px 12px}.task{display:grid;grid-template-columns:28px 1fr;gap:11px;padding:13px 20px;border-top:1px solid var(--line);cursor:pointer}.task:hover{background:#f4f7f3}.task input{width:20px;height:20px;accent-color:var(--sea)}.task b{display:block}.task small{display:block;color:var(--muted);line-height:1.45;margin-top:3px}.task:has(input:checked) b{text-decoration:line-through;color:var(--muted)}.actions{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:25px}.button{border:0;border-radius:9px;background:var(--navy);color:white;padding:11px 14px;font-weight:850;cursor:pointer}.muted{color:var(--muted);font-size:.8rem}@media(max-width:560px){.wrap{width:min(100% - 24px,900px)}.top{padding:38px 0 32px}.task{padding:13px 14px}.group h2{padding-inline:14px}.actions{align-items:flex-start;flex-direction:column}}@media print{.top{background:white;color:var(--ink);padding:20px 0}.top p,.back,.progress,.actions{display:none}.group{break-inside:avoid}.task:has(input:checked) b{text-decoration:none;color:var(--ink)}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="wrap"><a class="back" href="index.html">← Wróć do planu podróży</a><h1>Checklista przygotowań.</h1><p>Zaznaczenia zapisują się lokalnie w przeglądarce. Lista nie rezerwuje usług — służy jako wspólny porządek działań przed wyjazdem.</p><div class="summary"><span class="pill"><b id="done">0</b> wykonanych</span><span class="pill"><b id="left">0</b> pozostałych</span></div><div class="progress"><span id="bar"></span></div></div></header>
+  <main><div class="wrap">
+    <div class="notice"><strong>Najpierw wybierzcie trasę.</strong> Noclegi poza Atenami, terminy wynajmu auta i część biletów zależą od aktywnego wariantu na stronie głównej.</div>
+    <section class="group"><h2>Decyzje i noclegi</h2>
+      <label class="task"><input type="checkbox" data-task="route"><span><b>Wybrać ostateczny wariant trasy</b><small>Rekomendacja startowa: Mani lub Pylos i Mesenia.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="athens-hotel"><span><b>Zarezerwować nocleg w Atenach z późnym zameldowaniem</b><small>Potwierdzić na piśmie możliwość przyjazdu po późnym locie 9 IX.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="road-hotels"><span><b>Zarezerwować bazy poza Atenami</b><small>Sprawdzić parking, klimatyzację, anulowanie i układ łóżek dla 3 dorosłych.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="airport-hotel"><span><b>Jeśli wybrane są Meteory: zarezerwować 1 noc w Kastraki i 1 przy ATH</b><small>Hotel przy lotnisku powinien zapewniać transfer terminalowy.</small></span></label>
+    </section>
+    <section class="group"><h2>Samochód</h2>
+      <label class="task"><input type="checkbox" data-task="car"><span><b>Zarezerwować samochód dla 3 osób i bagażu</b><small>Odbiór po części ateńskiej; zwrot na ATH lub wieczorem 17 IX w wariancie Meteorów.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="card"><span><b>Potwierdzić wymagania karty i depozytu</b><small>Sprawdzić, czy wypożyczalnia wymaga karty kredytowej wystawionej na głównego kierowcę.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="insurance"><span><b>Sprawdzić zakres ubezpieczenia i udział własny</b><small>Osobno zweryfikować szyby, opony, podwozie i pomoc drogową.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="drivers"><span><b>Dodać kierowców i sprawdzić dokumenty</b><small>Prawo jazdy, dowód lub paszport oraz zasady dodatkowego kierowcy.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="return"><span><b>Zapisać dokładne miejsce i procedurę zwrotu</b><small>Uwzględnić tankowanie, zdjęcia auta i zapas przed lotem.</small></span></label>
+    </section>
+    <section class="group"><h2>Bilety i rezerwacje</h2>
+      <label class="task"><input type="checkbox" data-task="acropolis"><span><b>Zarezerwować poranne wejście na Akropol</b><small>Wybrać godzinę zgodną z planem na 10 IX.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="museum"><span><b>Sprawdzić bilety do Muzeum Akropolu i muzeów w Atenach</b><small>Zweryfikować oficjalne godziny oraz dni działania.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="special"><span><b>Zarezerwować atrakcje zależne od wariantu</b><small>Jaskinie Diros, Odontotos, degustacja w Nemei lub inne wejścia godzinowe.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="meteora-hours"><span><b>Jeśli wybrane są Meteory: sprawdzić czwartkowe otwarcia klasztorów</b><small>Ułożyć kolejność 2-3 klasztorów, parkingów i punktów widokowych.</small></span></label>
+    </section>
+    <section class="group"><h2>Kontrola 2-4 tygodnie przed wyjazdem</h2>
+      <label class="task"><input type="checkbox" data-task="flight"><span><b>Sprawdzić aktualne godziny lotów FR4937 i FR4936</b><small>Plan przyjmuje późny przylot 9 IX oraz odlot 18 IX o 20:10.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="hours"><span><b>Ponownie sprawdzić godziny wszystkich głównych atrakcji</b><small>Godziny sezonowe i zamknięcia mogą ulec zmianie.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="routes"><span><b>Zapisać dzienne trasy i parkingi w telefonach</b><small>Pobrać mapy offline Google Maps dla Aten, Peloponezu i ewentualnie Tesalii.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="weather"><span><b>Sprawdzić pogodę, upał i warunki na drogach</b><small>Zwłaszcza przed szlakami, jaskiniami i górskimi odcinkami.</small></span></label>
+    </section>
+    <section class="group"><h2>Przed wyjściem z domu</h2>
+      <label class="task"><input type="checkbox" data-task="documents"><span><b>Zapisać dokumenty i rezerwacje offline</b><small>Loty, noclegi, auto, ubezpieczenie, bilety i numery alarmowe.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="transfer"><span><b>Potwierdzić transfer z ATH pierwszego wieczoru</b><small>Wysłać godzinę lądowania do obiektu i zapisać adres noclegu.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="packing"><span><b>Spakować rzeczy potrzebne w planie</b><small>Wygodne buty, ochrona przeciwsłoneczna, butelki na wodę i strój zakrywający ramiona oraz kolana do klasztorów.</small></span></label>
+    </section>
+    <div class="actions"><span class="muted">Dane pozostają wyłącznie na tym urządzeniu.</span><button class="button" id="reset" type="button">Wyczyść zaznaczenia</button></div>
+  </div></main>
+  <script>
+    const boxes=[...document.querySelectorAll('[data-task]')],key='greece-2026-preparation';let saved={};try{saved=JSON.parse(localStorage.getItem(key)||'{}')}catch{}boxes.forEach(x=>{x.checked=!!saved[x.dataset.task];x.addEventListener('change',save)});function save(){saved=Object.fromEntries(boxes.map(x=>[x.dataset.task,x.checked]));localStorage.setItem(key,JSON.stringify(saved));render()}function render(){const n=boxes.filter(x=>x.checked).length;document.querySelector('#done').textContent=n;document.querySelector('#left').textContent=boxes.length-n;document.querySelector('#bar').style.width=`${n/boxes.length*100}%`}document.querySelector('#reset').addEventListener('click',()=>{if(!confirm('Wyczyścić wszystkie zaznaczenia?'))return;boxes.forEach(x=>x.checked=false);save()});render();
+  </script>
+</body>
+</html>

@@ -5,6 +5,8 @@ A static, responsive website comparing travel options for three adults visiting 
 ## Published files
 
 - `index.html` — the complete trip-planning website
+- `preparation.html` — the interactive preparation checklist
+- `TRIP_ASSUMPTIONS.md` — the planning constraints and content rules
 - `greece-route-hero.png` — the header illustration
 
 Attraction photos, OpenStreetMap tiles, and OSRM road routes are loaded online. The website requires no build process or installed dependencies.
@@ -30,7 +32,7 @@ Configure the repository under **Settings → Pages**:
 The website will be published at:
 
 ```text
-https://GITHUB-USERNAME.github.io/REPOSITORY-NAME/
+https://greek-wizard.github.io/greece-plan-2026/
 ```
 
 ## Updating the website
@@ -38,7 +40,7 @@ https://GITHUB-USERNAME.github.io/REPOSITORY-NAME/
 After editing the page:
 
 ```powershell
-git add index.html greece-route-hero.png
+git add index.html preparation.html TRIP_ASSUMPTIONS.md README.md greece-route-hero.png
 git commit -m "Update trip plan"
 git push
 ```
