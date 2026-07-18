@@ -36,5 +36,5 @@
 - Overall trip cost estimates are intentionally deferred; verified adult admission prices may be shown beside paid attractions.
 - Each day includes a start guideline, approximate activity duration, meal time, priorities, and a reservation or logistics reminder.
 - Important hours, prices, schedules, and travel times must be checked again 2–4 weeks before departure.
-- The attraction ranking compares all seven published variants and labels unused places as substitutions rather than additions to a full itinerary.
+- The attraction ranking compares all seven published variants and labels unused places as substitutions rather than additions to a full itinerary. Ranking position is based on editorial attractiveness and popularity; variant coverage is informational and does not affect the order.
 - The page is a planning aid, not a replacement for official tickets, live navigation, or supplier terms.
