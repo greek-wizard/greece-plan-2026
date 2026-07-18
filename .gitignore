@@ -1,7 +1,9 @@
 # Local working files and older prototypes
 vacation-plan.html
 vacation-alternatives.html
-images/
+images/*
+!images/trip/
+!images/trip/**
 
 # System and tool files
 .agents/

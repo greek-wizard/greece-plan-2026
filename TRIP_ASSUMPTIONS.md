@@ -24,6 +24,7 @@
 
 - The rental car is collected after the Athens city stay.
 - Routes should avoid changing accommodation without a clear benefit.
+- In applicable Peloponnese routes, the farther base comes immediately after Athens and Nauplion is the final base, reducing the drive to Athens airport on departure day.
 - Meteora is optional and must use the rental car rather than a coach tour.
 - The recommended Meteora option uses no more than one night near Meteora.
 - A same-day Athens–Meteora–Athens drive is shown only for comparison and is not recommended.
@@ -35,4 +36,5 @@
 - Overall trip cost estimates are intentionally deferred; verified adult admission prices may be shown beside paid attractions.
 - Each day includes a start guideline, approximate activity duration, meal time, priorities, and a reservation or logistics reminder.
 - Important hours, prices, schedules, and travel times must be checked again 2–4 weeks before departure.
+- The attraction ranking compares all seven published variants and labels unused places as substitutions rather than additions to a full itinerary.
 - The page is a planning aid, not a replacement for official tickets, live navigation, or supplier terms.
