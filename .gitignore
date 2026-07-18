@@ -1,0 +1,11 @@
+# Local working files and older prototypes
+vacation-plan.html
+vacation-alternatives.html
+images/
+
+# System and tool files
+.agents/
+.codex/
+.DS_Store
+Thumbs.db
+*.tmp
