@@ -35,7 +35,7 @@
 - Repository documentation, filenames, and commit messages are written in English.
 - Overall trip cost estimates are intentionally deferred; verified adult admission prices may be shown beside paid attractions.
 - Each day uses an impersonal planning style and includes a three-step graphical intensity indicator, approximate main-plan duration, and a detailed timeline. Start times live in the timeline rather than in a duplicate label.
-- Each route has a sticky day navigator. Day cards start expanded on larger screens; on mobile they start collapsed, and opening one day collapses the others to keep scrolling short.
+- Day cards use a single-open accordion on every screen. Opening one day closes the previous one, and the horizontal day navigator is intentionally omitted to keep the interface simple.
 - Day labels are limited to information that changes decisions: intensity, duration, flexible time, accommodation, flight constraints, and exceptional reservation or service warnings. Days without a key attraction are explicitly marked as suitable for planning ad hoc.
 - General assumptions and flight information live on `info.html`; the main page focuses on comparing route variants.
 - Important hours, prices, schedules, and travel times must be checked again 2–4 weeks before departure.
