@@ -34,9 +34,9 @@
 - User-facing travel content is written in Polish.
 - Repository documentation, filenames, and commit messages are written in English.
 - Overall trip cost estimates are intentionally deferred; verified adult admission prices may be shown beside paid attractions.
-- Each day uses an impersonal planning style and includes a concise intensity level, approximate main-plan duration, and a detailed timeline. Start times live in the timeline rather than in a duplicate label.
-- Day labels are limited to information that changes decisions: intensity, duration, accommodation, flight constraints, and exceptional reservation or service warnings.
+- Each day uses an impersonal planning style and includes a three-step graphical intensity indicator, approximate main-plan duration, and a detailed timeline. Start times live in the timeline rather than in a duplicate label.
+- Day labels are limited to information that changes decisions: intensity, duration, flexible time, accommodation, flight constraints, and exceptional reservation or service warnings. Days without a key attraction are explicitly marked as suitable for planning ad hoc.
 - General assumptions and flight information live on `info.html`; the main page focuses on comparing route variants.
 - Important hours, prices, schedules, and travel times must be checked again 2–4 weeks before departure.
-- The attraction ranking compares all seven published variants and labels unused places as substitutions rather than additions to a full itinerary. Ranking position is based on editorial attractiveness and popularity; variant coverage is informational and does not affect the order.
+- The attraction ranking compares all seven published variants and labels unused places as substitutions rather than additions to a full itinerary. Ranking position is an editorial assessment of attractiveness, popularity, uniqueness, and relevance to this trip; the Acropolis is the 10.0 benchmark and all other places rank below it. Variant coverage is informational and does not affect the order.
 - The page is a planning aid, not a replacement for official tickets, live navigation, or supplier terms.
