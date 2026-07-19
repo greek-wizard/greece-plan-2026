@@ -7,6 +7,7 @@ A static, responsive website comparing travel options for three adults visiting 
 - `index.html` — the complete trip-planning website
 - `attractions.html` — the ranked attraction list and unused alternatives
 - `preparation.html` — the interactive preparation checklist
+- `info.html` — shared flight details and trip-planning assumptions
 - `TRIP_ASSUMPTIONS.md` — the planning constraints and content rules
 - `PHOTO_CREDITS.md` — photo-source and license policy
 - `images/trip/` — manually reviewed, locally stored attraction photographs
@@ -51,7 +52,7 @@ The pre-commit hook writes the current Warsaw date and time into the version str
 After editing the page:
 
 ```powershell
-git add index.html attractions.html preparation.html TRIP_ASSUMPTIONS.md README.md PHOTO_CREDITS.md images/trip .githooks scripts
+git add index.html attractions.html preparation.html info.html TRIP_ASSUMPTIONS.md README.md PHOTO_CREDITS.md images/trip .githooks scripts
 git commit -m "Update trip plan"
 git push
 ```
