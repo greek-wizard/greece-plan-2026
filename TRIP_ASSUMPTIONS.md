@@ -41,5 +41,6 @@
 - Important hours, prices, schedules, and travel times must be checked again 2–4 weeks before departure.
 - The attraction ranking compares all eight published variants and labels unused places as substitutions rather than additions to a full itinerary. Ranking position is an editorial assessment of attractiveness, popularity, uniqueness, and relevance to this trip. The curated list uses a practical 7.5–10.0 range: the Acropolis is the 10.0 benchmark, while the lower end still means that a place is worth considering. Ties are allowed. Variant coverage is informational and does not affect the order.
 - The Athens–Tolo variant deliberately uses only two bases: four nights in Athens and five nights in Tolo. Its same-day Meteora drive is retained as a requested but explicitly non-recommended exception to the moderate pace.
+- Fuel estimates use €2.00 per litre for unleaded 95 and average consumption of 7.0 l/100 km. Values are rounded to the nearest €5 for the whole car and exclude tolls, parking, and unplanned local driving.
 - The active route is shown and editable on the main itinerary and attraction-ranking pages. It is intentionally omitted from the preparation checklist and general-information page.
 - The page is a planning aid, not a replacement for official tickets, live navigation, or supplier terms.
