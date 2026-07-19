@@ -36,7 +36,7 @@
   </style>
 </head>
 <body>
-  <div class="version-strip" role="status">Wersja: <time id="build-time" datetime="2026-07-19T10:14:08.241Z">19.07.2026, 12:14 CEST</time></div>
+  <div class="version-strip" role="status">Wersja: <time id="build-time" datetime="2026-07-19T10:17:19.005Z">19.07.2026, 12:17 CEST</time></div>
   <nav class="global-nav" aria-label="Główne menu"><div class="wrap nav-row"><div class="site-menu"><a class="active" href="index.html#porownanie" title="Plan i warianty">Plan</a><a href="attractions.html">Atrakcje</a><a href="preparation.html">Checklista</a><a href="info.html" title="Informacje i założenia">Info</a></div><button class="active-trip" id="active-trip-button" type="button" title="Zmień aktywny wariant"><b data-active-variant>Mani</b></button></div></nav>
   <header class="hero"><div class="wrap hero-copy"><h1>Ateny.<br>Peloponez.</h1><p>Plan podróży 9–18 września 2026 dla trzech dorosłych: dwa dni w Atenach, następnie objazd Peloponezu i opcjonalne Meteory.</p></div></header>
   <section class="variant-picker-band"><div class="wrap"><div class="variant-nav"><span class="variant-nav-label">Aktywny wariant</span><button class="variant-trigger" id="variant-trigger" type="button" aria-haspopup="dialog" aria-controls="variant-dialog"><b id="variant-trigger-title">Mani i Mesenia</b><small id="variant-trigger-note">Rekomendowany · najlepszy balans</small><span class="variant-trigger-icon" aria-hidden="true"></span></button></div></div></section>
@@ -564,5 +564,6 @@
         try{const coords=pts.map(p=>`${p[1]},${p[0]}`).join(';'),url=`https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&geometries=geojson`,data=await fetch(url).then(r=>{if(!r.ok)throw Error();return r.json()});if(current!==requestNo)return;const route=data.routes?.[0];if(!route)throw Error();L.geoJSON(route.geometry,{style:{color:'#176f7c',weight:5,opacity:.88}}).addTo(layer);status.textContent=`Trasa drogowa: około ${Math.round(route.distance/1000)} km i ${Math.round(route.duration/3600*10)/10} godz. samej jazdy.`}catch{if(current!==requestNo)return;L.polyline(pts.map(p=>p.slice(0,2)),{color:'#176f7c',weight:4,opacity:.85,dashArray:'8 6'}).addTo(layer);status.textContent='Serwis trasowania jest chwilowo niedostępny — pokazano kolejność punktów.'}}
       drawRoute(localStorage.getItem('grecja-wariant')||'mani');setTimeout(()=>map.invalidateSize(),100)}else{document.querySelector('#map').innerHTML='<p style="padding:30px">Mapa wymaga połączenia z internetem.</p>'}
   </script>
+  <script src="site-help.js"></script>
 </body>
 </html>
