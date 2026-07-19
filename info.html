@@ -17,7 +17,7 @@
   </style>
 </head>
 <body>
-  <nav class="global-nav" aria-label="Główne menu"><div class="wrap nav-row"><div class="site-menu"><a href="index.html#porownanie" title="Plan i warianty">Plan</a><a href="attractions.html">Atrakcje</a><a href="preparation.html">Checklista</a><a class="active" href="info.html" title="Informacje i założenia">Info</a></div><span class="active-trip" title="Aktywny wariant trasy"><b data-active-variant>Mani</b></span></div></nav>
+  <nav class="global-nav" aria-label="Główne menu"><div class="wrap nav-row"><div class="site-menu"><a href="index.html#porownanie" title="Plan i warianty">Plan</a><a href="attractions.html">Atrakcje</a><a href="preparation.html">Checklista</a><a class="active" href="info.html" title="Informacje i założenia">Info</a></div></div></nav>
   <header class="hero"><div class="wrap"><h1>Informacje i założenia.</h1><p>Dane lotów, preferowany styl podróży i zasady wspólne dla wszystkich wariantów trasy 9–18 września 2026 dla trzech dorosłych.</p></div></header>
   <main><div class="wrap">
     <div class="lead"><strong>Peloponez na pierwszym planie.</strong> Dwa pełne dni są przeznaczone na Ateny, a odbiór samochodu następuje dopiero przed rozpoczęciem objazdu. Meteory pozostają opcją dodatkową, która nie powinna nadmiernie skracać części peloponeskiej.</div>
@@ -30,9 +30,5 @@
     </div>
     <div class="warning"><strong>Przed rezerwacją:</strong> wybór ostatecznego wariantu powinien poprzedzać rezerwację noclegów poza Atenami i ustalenie dat wynajmu samochodu. Ceny, rozkłady oraz godziny wejść wymagają ponownej kontroli 2–4 tygodnie przed podróżą.</div>
   </div></main>
-  <script>
-    const activeVariantNames={mani:'Mani',pylos:'Pylos',monemvasia:'Monemvasia',meteora:'Meteory + noc',meteora_day:'Meteory · dzień',arcadia:'Arkadia',kalavryta:'Kalavryta'};
-    document.querySelectorAll('[data-active-variant]').forEach(x=>x.textContent=activeVariantNames[localStorage.getItem('grecja-wariant')]||'Mani');
-  </script>
 </body>
 </html>
