@@ -43,5 +43,6 @@
 - The Athens–Tolo variant deliberately uses only two bases: four nights in Athens and five nights in Tolo. Its same-day Meteora drive is retained as a requested but explicitly non-recommended exception to the moderate pace.
 - Fuel estimates use €2.00 per litre for unleaded 95 and average consumption of 7.0 l/100 km. Values are rounded to the nearest €5 for the whole car and exclude tolls, parking, and unplanned local driving.
 - Attraction totals use full adult admission for three adults. They include fixed paid stops in each itinerary, count package admission once, and exclude discounts, optional visits, tastings, donations, suspended services, and attractions whose current price is not confirmed. Conditional Acrocorinth is shown as a range.
+- Toll estimates use 2026 category-2 passenger-car tariffs without transponder discounts. They assume a central-Athens pickup and airport return, and are shown as ranges because ramp selection and navigation choices can change the total by several euros.
 - The active route is shown and editable on the main itinerary and attraction-ranking pages. It is intentionally omitted from the preparation checklist and general-information page.
 - The page is a planning aid, not a replacement for official tickets, live navigation, or supplier terms.
