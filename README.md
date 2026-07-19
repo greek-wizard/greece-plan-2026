@@ -47,7 +47,7 @@ Enable the repository hook once after cloning:
 git config core.hooksPath .githooks
 ```
 
-The pre-commit hook writes the current Warsaw date and time into the version strip in `index.html` and stages that update automatically.
+The pre-commit hook writes the current Warsaw date and time into the version badge on every published page and stages those updates automatically.
 
 After editing the page:
 

@@ -1,7 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 
-const pagePath = new URL("../index.html", import.meta.url);
-const page = await readFile(pagePath, "utf8");
+const pageNames = ["index.html", "attractions.html", "preparation.html", "info.html"];
 const now = new Date();
 const iso = now.toISOString();
 const display = new Intl.DateTimeFormat("pl-PL", {
@@ -16,14 +15,19 @@ const display = new Intl.DateTimeFormat("pl-PL", {
 }).format(now);
 const marker = /<time id="build-time" datetime="[^"]*">[^<]*<\/time>/;
 
-if (!marker.test(page)) {
-  throw new Error("Build-time marker was not found in index.html");
+for (const pageName of pageNames) {
+  const pagePath = new URL(`../${pageName}`, import.meta.url);
+  const page = await readFile(pagePath, "utf8");
+
+  if (!marker.test(page)) {
+    throw new Error(`Build-time marker was not found in ${pageName}`);
+  }
+
+  const updated = page.replace(
+    marker,
+    `<time id="build-time" datetime="${iso}">${display}</time>`,
+  );
+  await writeFile(pagePath, updated, "utf8");
 }
 
-const updated = page.replace(
-  marker,
-  `<time id="build-time" datetime="${iso}">${display}</time>`,
-);
-
-await writeFile(pagePath, updated, "utf8");
-console.log(`Updated page version time: ${display}`);
+console.log(`Updated page version time in ${pageNames.length} pages: ${display}`);
