@@ -11,13 +11,13 @@
 ## Travel style
 
 - Moderate pace with time for meals and rest.
-- Athens first, followed by a self-drive route.
+- Athens first, followed by one self-drive base in Tolo.
 - The Peloponnese is the primary destination.
 - History, landscapes, food, beaches, towns, and light walking have equal weight.
 - Nightlife is not a travel priority and should not be added to the itinerary.
 - Nearby islands are a low priority and should not displace stronger mainland sights.
 - No fixed accommodation budget has been set yet.
-- Two or three main accommodation bases are acceptable when they make logistical sense.
+- The accommodation decision is fixed: four nights in Athens followed by five nights in Tolo. The Tolo hotel must have a pool operating during the September stay.
 - The travelers will choose and book their own accommodation, probably through Booking.com.
 - For the Athens stay, search Koukaki/Makrygianni first, ideally between the Acropoli and Syngrou–Fix metro stations. This gives the best balance of walking access, restaurants, price, and a comfortable residential setting. Mets near the Panathenaic Stadium is the quieter second choice; northern Neos Kosmos, within roughly 5–8 minutes of a metro station, is the value-oriented fallback.
 - Do not choose Omonia, Vathis Square, or deep Metaxourgeio solely because the listing is cheaper. They are not categorically off-limits, but the trade-off is less attractive for a group arriving around 23:00 and returning on foot. Treat Athens as a large city: normal precautions against pickpocketing still apply, especially on public transport and around major sights.
@@ -25,13 +25,12 @@
 
 ## Car and route constraints
 
-- The rental car is collected after the Athens city stay.
+- The rental car is collected on September 13, after the Athens stay and the organized Meteora excursion.
 - Routes should avoid changing accommodation without a clear benefit.
 - In applicable Peloponnese routes, the farther base comes immediately after Athens and Nauplion is the final base, reducing the drive to Athens airport on departure day.
-- Delphi and Meteora are optional trips outside the Peloponnese and must use the rental car rather than a coach tour.
-- Delphi is the recommended same-day option from Athens: roughly 364 km and five hours of driving in total.
-- A Delphi day does not need a pre-dawn start: an 08:00 departure, arrival around 10:30, and return around 18:30–19:00 is a reasonable September plan. An earlier start is justified only if Arachova or another extra stop is deliberately added. Recheck the official opening hours before booking.
-- The same-day Athens–Meteora–Athens drive remains only in the Athens–Tolo comparison variant and is not recommended for a moderate pace.
+- Meteora is a fixed organized one-day coach excursion from Athens on September 12. Do not collect the rental car for this day.
+- The current reference product departs near Larissis station at 08:00 and returns around 22:30 after roughly 13.5 hours. Recheck availability, meeting point, inclusions, monastery access, dress rules, and the operating schedule before booking.
+- Delphi is no longer part of the current plan. It remains only in the archived route comparison.
 
 ## Website rules
 
@@ -43,8 +42,8 @@
 - Day labels are limited to information that changes decisions: intensity, duration, flexible time, accommodation, flight constraints, and exceptional reservation or service warnings. Days without a key attraction are explicitly marked as suitable for planning ad hoc.
 - General assumptions and flight information live on `info.html`; the main page focuses on comparing route variants.
 - Important hours, prices, schedules, and travel times must be checked again 2–4 weeks before departure.
-- The attraction ranking compares all seven published variants and labels unused places as substitutions rather than additions to a full itinerary. Ranking position is an editorial assessment of attractiveness, popularity, uniqueness, and relevance to this trip. The curated list uses a practical 7.5–10.0 range: the Acropolis is the 10.0 benchmark, while the lower end still means that a place is worth considering. Ties are allowed. Variant coverage is informational and does not affect the order.
-- Both Athens–Tolo variants deliberately use only two bases: four nights in Athens and five nights in Tolo. The Delphi version is recommended; the original same-day Meteora drive is retained as an explicitly non-recommended exception to the moderate pace.
+- The attraction ranking compares the three current two-base variants and labels unused places as substitutions rather than additions to a full itinerary. Ranking position is an editorial assessment of attractiveness, popularity, uniqueness, and relevance to this trip. The curated list uses a practical 7.5–10.0 range: the Acropolis is the 10.0 benchmark, while the lower end still means that a place is worth considering. Ties are allowed. Variant coverage is informational and does not affect the order.
+- All current variants deliberately use the same two bases: four nights in Athens and five nights in Tolo. They differ only in the final Tolo day trips. The previous seven routes are retained on `old-plans.html` as an archive.
 - Fuel estimates use €2.00 per litre for unleaded 95 and average consumption of 7.0 l/100 km. Values are rounded to the nearest €5 for the whole car and exclude tolls, parking, and unplanned local driving.
 - Attraction totals use full adult admission for three adults. They include fixed paid stops in each itinerary, count package admission once, and exclude discounts, optional visits, tastings, donations, suspended services, and attractions whose current price is not confirmed. Conditional Acrocorinth is shown as a range.
 - Toll estimates use 2026 category-2 passenger-car tariffs without transponder discounts. They assume a central-Athens pickup and airport return, and are shown as ranges because ramp selection and navigation choices can change the total by several euros.

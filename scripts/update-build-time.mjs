@@ -1,6 +1,12 @@
 import { readFile, writeFile } from "node:fs/promises";
 
-const pageNames = ["index.html", "attractions.html", "preparation.html", "info.html"];
+const pageNames = [
+  "index.html",
+  "attractions.html",
+  "preparation.html",
+  "info.html",
+  "old-plans.html",
+];
 const now = new Date();
 const iso = now.toISOString();
 const display = new Intl.DateTimeFormat("pl-PL", {
