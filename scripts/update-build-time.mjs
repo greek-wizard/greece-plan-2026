@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const pageNames = [
   "index.html",
+  "excursions.html",
   "attractions.html",
   "preparation.html",
   "info.html",

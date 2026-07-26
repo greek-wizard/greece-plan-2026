@@ -3,4 +3,4 @@
 set -eu
 
 node scripts/update-build-time.mjs
-git add -- index.html attractions.html preparation.html info.html old-plans.html
+git add -- index.html excursions.html attractions.html preparation.html info.html old-plans.html

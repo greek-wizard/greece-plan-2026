@@ -4,7 +4,8 @@ A static, responsive website comparing travel options for three adults visiting 
 
 ## Published files
 
-- `index.html` — the current two-base trip plan and selectable catalogue of eight Tolo day trips
+- `index.html` — the detailed current itinerary generated from the four selected Tolo day trips
+- `excursions.html` — the selectable catalogue of eight car day trips from Tolo
 - `old-plans.html` — the archived seven-route comparison retained for reference
 - `attractions.html` — the ranked attraction list and unused alternatives
 - `preparation.html` — the interactive preparation checklist
@@ -18,7 +19,8 @@ OpenStreetMap tiles and OSRM road routes are loaded online. Attraction photograp
 
 ## Project structure
 
-- `index.html` is the current itinerary and selection experience. It keeps four Athens nights, five Tolo nights, a Tolo hotel with a pool, the organized Meteora coach day, a fixed attraction-rich transfer to Tolo, and four user-selected car day trips.
+- `index.html` is the detailed day-by-day itinerary. It reads the four choices stored by `excursions.html`, renders them on September 14–17, and updates the current distance and attraction summary.
+- `excursions.html` is the only current option-comparison surface. It stores up to four selected car day trips in `localStorage`.
 - `old-plans.html` preserves the previous seven-route comparison. It is an archive, not a source for the current active variant stored by the main pages.
 - `attractions.html` is the attraction ranking and substitution catalogue. Keep its variant coverage consistent with the published route variants.
 - `preparation.html` is a browser-local checklist. It stores checkbox state in `localStorage`.
