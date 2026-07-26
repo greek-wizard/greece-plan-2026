@@ -46,3 +46,4 @@
 - Toll estimates use 2026 category-2 passenger-car tariffs without transponder discounts. They assume a central-Athens pickup and airport return, and are shown as ranges because ramp selection and navigation choices can change the total by several euros.
 - The active route is shown and editable on the main itinerary and attraction-ranking pages. It is intentionally omitted from the preparation checklist and general-information page.
 - The page is a planning aid, not a replacement for official tickets, live navigation, or supplier terms.
+- When a content update reveals a durable assumption, verified source, exception, or editing rule that would improve future work, record it in this file or another relevant Markdown file during the same change.

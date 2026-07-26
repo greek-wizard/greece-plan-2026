@@ -15,6 +15,21 @@ A static, responsive website comparing travel options for three adults visiting 
 
 OpenStreetMap tiles and OSRM road routes are loaded online. Attraction photographs are stored locally for stable rendering. The website requires no build process or installed dependencies.
 
+## Project structure
+
+- `index.html` is the main itinerary and comparison experience. It contains the route variants, day panels, overview data, map configuration, lightbox behavior, and most itinerary-specific data.
+- `attractions.html` is the attraction ranking and substitution catalogue. Keep its variant coverage consistent with the published route variants.
+- `preparation.html` is a browser-local checklist. It stores checkbox state in `localStorage`.
+- `info.html` holds shared flight information and general assumptions so the main page can stay focused on comparing route options.
+- `site-help.js` injects the shared help dialog used across the pages.
+- `scripts/update-build-time.mjs` updates the fixed version badge on all published pages.
+- `.githooks/pre-commit` runs the timestamp updater and stages the affected HTML files.
+- `images/trip/` contains reviewed local attraction photos. Photo source and license policy lives in `PHOTO_CREDITS.md`.
+- `TRIP_ASSUMPTIONS.md` is the source of truth for editorial and planning rules.
+- `AGENTS.md` contains Codex-specific workflow and maintenance instructions.
+
+When future work uncovers a project convention, verified source, maintenance step, or recurring pitfall that would help future contributors, add it to the relevant Markdown file during the same change.
+
 ## Local preview
 
 You can open `index.html` directly in a browser. To avoid browser restrictions affecting local files, run a small local server:
