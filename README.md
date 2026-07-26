@@ -19,7 +19,7 @@ OpenStreetMap tiles and OSRM road routes are loaded online. Attraction photograp
 
 ## Project structure
 
-- `index.html` is the detailed day-by-day itinerary. It reads the four choices stored by `excursions.html`, renders them on September 14–17, and updates the current distance and attraction summary.
+- `index.html` is the detailed day-by-day itinerary. It reads the four choices stored by `excursions.html`, renders them on September 14–17, updates the current distance and attraction summary, and provides an overview map plus a route map inside each day accordion.
 - `excursions.html` is the only current option-comparison surface. It stores up to four selected car day trips in `localStorage`.
 - `old-plans.html` preserves the previous seven-route comparison. It is an archive, not a source for the current active variant stored by the main pages.
 - `attractions.html` is the attraction ranking and substitution catalogue. Keep its variant coverage consistent with the published route variants.
