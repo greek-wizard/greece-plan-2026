@@ -19,6 +19,9 @@
 - No fixed accommodation budget has been set yet.
 - Two or three main accommodation bases are acceptable when they make logistical sense.
 - The travelers will choose and book their own accommodation, probably through Booking.com.
+- For the Athens stay, search Koukaki/Makrygianni first, ideally between the Acropoli and Syngrou–Fix metro stations. This gives the best balance of walking access, restaurants, price, and a comfortable residential setting. Mets near the Panathenaic Stadium is the quieter second choice; northern Neos Kosmos, within roughly 5–8 minutes of a metro station, is the value-oriented fallback.
+- Do not choose Omonia, Vathis Square, or deep Metaxourgeio solely because the listing is cheaper. They are not categorically off-limits, but the trade-off is less attractive for a group arriving around 23:00 and returning on foot. Treat Athens as a large city: normal precautions against pickpocketing still apply, especially on public transport and around major sights.
+- No car is needed during the Athens stay. The rental car should be collected after the city days; for the late arrival, plan a direct transfer to the accommodation rather than an evening sightseeing program.
 
 ## Car and route constraints
 
@@ -27,6 +30,7 @@
 - In applicable Peloponnese routes, the farther base comes immediately after Athens and Nauplion is the final base, reducing the drive to Athens airport on departure day.
 - Delphi and Meteora are optional trips outside the Peloponnese and must use the rental car rather than a coach tour.
 - Delphi is the recommended same-day option from Athens: roughly 364 km and five hours of driving in total.
+- A Delphi day does not need a pre-dawn start: an 08:00 departure, arrival around 10:30, and return around 18:30–19:00 is a reasonable September plan. An earlier start is justified only if Arachova or another extra stop is deliberately added. Recheck the official opening hours before booking.
 - The same-day Athens–Meteora–Athens drive remains only in the Athens–Tolo comparison variant and is not recommended for a moderate pace.
 
 ## Website rules
@@ -46,4 +50,6 @@
 - Toll estimates use 2026 category-2 passenger-car tariffs without transponder discounts. They assume a central-Athens pickup and airport return, and are shown as ranges because ramp selection and navigation choices can change the total by several euros.
 - The active route is shown and editable on the main itinerary and attraction-ranking pages. It is intentionally omitted from the preparation checklist and general-information page.
 - The page is a planning aid, not a replacement for official tickets, live navigation, or supplier terms.
+- Map views should distinguish the overview route from the detailed day route, show accommodation bases when relevant, and make the active variant clear. If neighborhood areas are shown, use sourced geometry or clearly label the result as an orientation zone rather than presenting an invented precise boundary.
+- Attraction photography is part of the planning value: use real, visually attractive views of the named place. Reject logos, maps, diagrams, generic people shots, and weak or misleading images. Prefer a building, ruin, or landscape over an isolated museum object unless the object is itself the main reason to visit. Inspect every candidate image before adding it, store a local copy, and record the source and license.
 - When a content update reveals a durable assumption, verified source, exception, or editing rule that would improve future work, record it in this file or another relevant Markdown file during the same change.

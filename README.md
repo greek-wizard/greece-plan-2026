@@ -64,6 +64,13 @@ git config core.hooksPath .githooks
 
 The pre-commit hook writes the current Warsaw date and time into the version badge on every published page and stages those updates automatically.
 
+## Content and media maintenance
+
+- Keep Polish diacritics as UTF-8 end to end. Mojibake such as `â€™`, `Ä™`, or `Å›` indicates an encoding problem and must be corrected before committing.
+- When adding a route or changing a variant, update the picker, comparison table, overview data, route panel, map data, attraction coverage, and any affected assumptions together.
+- Review attraction photographs visually, not only by filename or search result. The image must show the actual attraction or its landscape, avoid logos and diagrams, and remain useful on a modern phone. Store reviewed files locally and update `PHOTO_CREDITS.md` and the in-page source metadata together.
+- Treat map routing and online opening information as live data. Keep a readable fallback when OSRM or another online service is unavailable, and preserve an official source link for time-sensitive prices, hours, and suspended services.
+
 After editing the page:
 
 ```powershell

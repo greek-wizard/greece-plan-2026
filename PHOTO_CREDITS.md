@@ -44,3 +44,7 @@ The extended attraction ranking also uses these manually reviewed Flickr photogr
 - Heraion of Perachora by Following Hadrian — CC BY-SA 2.0.
 
 Do not replace a local photograph without reviewing the complete image and updating its credit entry in `index.html`.
+
+Additional Delphi day photograph:
+
+- Tholos of Athena Pronaia at Delphi by Egisto Sani — CC BY-NC-SA 2.0: https://www.flickr.com/photos/69716881@N02/34661014615
