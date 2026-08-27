@@ -28,8 +28,8 @@
 - The rental car is collected on September 13, after the Athens stay and the organized Meteora excursion.
 - Routes should avoid changing accommodation without a clear benefit.
 - In applicable Peloponnese routes, the farther base comes immediately after Athens and Nauplion is the final base, reducing the drive to Athens airport on departure day.
-- Meteora is a fixed organized one-day coach excursion from Athens on September 12. Do not collect the rental car for this day.
-- The current reference product departs near Larissis station at 08:00 and returns around 22:30 after roughly 13.5 hours. Recheck availability, meeting point, inclusions, monastery access, dress rules, and the operating schedule before booking.
+- Meteora is a booked, fixed organized one-day excursion from Athens on September 12. Do not collect the rental car for this day.
+- The booked Meteora tour lasts 15 hours. Meeting time is 07:45 across the street from the Athens railway station, the tour starts at 08:00, and the plan therefore assumes a return around 23:00. Save the voucher offline and recheck the exact meeting point, supplier messages, monastery access, and dress rules shortly before departure.
 - Delphi is no longer part of the current plan. It remains only in the archived route comparison.
 
 ## Website rules
@@ -42,6 +42,7 @@
 - Day labels are limited to information that changes decisions: intensity, duration, flexible time, accommodation, flight constraints, and exceptional reservation or service warnings. Days without a key attraction are explicitly marked as suitable for planning ad hoc.
 - General assumptions and flight information live on `info.html`; the main page focuses on comparing route variants.
 - Important hours, prices, schedules, and travel times must be checked again 2–4 weeks before departure.
+- Acropolis admission is booked for September 10 with an entry window of 17:00–18:00. The Athens itinerary must preserve this slot and allow roughly 30 minutes to reach the entrance and pass ticket checks.
 - The attraction ranking compares the eight current day-trip options from Tolo and labels places outside those options as substitutions. Ranking position is an editorial assessment of attractiveness, popularity, uniqueness, and relevance to this trip. The curated list uses a practical 7.5–10.0 range: the Acropolis is the 10.0 benchmark, while the lower end still means that a place is worth considering. Ties are allowed.
 - The current plan uses two bases: four nights in Athens and five nights in Tolo. September 13 is a fixed transfer day via the Corinth Canal, Ancient Corinth and Mycenae; September 14–17 are four user-selected day trips from a catalogue of eight; September 18 is a light airport-transfer day. The previous seven routes remain on `old-plans.html` as an archive.
 - Fuel estimates use €2.00 per litre for unleaded 95 and average consumption of 7.0 l/100 km. Values are rounded to the nearest €5 for the whole car and exclude tolls, parking, and unplanned local driving.
