@@ -35,6 +35,12 @@ The expanded day cards use these additional, manually reviewed Flickr photograph
 - Gialova Lagoon by costanavarino — CC BY-ND 2.0.
 - Dimitsana and Stemnitsa by Anita363 — CC BY-NC 2.0.
 
+The excursion catalogue and related attraction cards use these additional, manually reviewed Wikimedia Commons panoramas:
+
+- Ancient Theatre of Epidaurus panorama by Rvjansen22 — CC BY-SA 4.0: https://commons.wikimedia.org/wiki/File:Panorama_Epidaurus.jpg
+- Temple of Zeus at Nemea by Ophelia2 — CC BY-SA 3.0: https://commons.wikimedia.org/wiki/File:Nemea_-_Temple_of_Zeus.jpg
+- Traditional settlement and harbor of Hydra by Violeta Meleti — CC BY-SA 4.0: https://commons.wikimedia.org/wiki/File:Traditional_settlement_on_Hydra_island_,_Greece.jpg
+
 The extended attraction ranking also uses these manually reviewed Flickr photographs:
 
 - Cape Tainaron by tortipede — CC BY-NC-SA 2.0.

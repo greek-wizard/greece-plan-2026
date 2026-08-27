@@ -19,8 +19,8 @@ OpenStreetMap tiles and OSRM road routes are loaded online. Attraction photograp
 
 ## Project structure
 
-- `index.html` is the detailed day-by-day itinerary. It reads the four choices stored by `excursions.html`, renders them on September 14–17, updates the current distance and attraction summary, and provides an overview map plus a wider-framed route map and Google Maps directions link inside each driving-day accordion.
-- `excursions.html` is the only current option-comparison surface. Each option combines a large reviewed photograph, compact route map, logistics, and trade-offs; it stores up to four selected car day trips in `localStorage`.
+- `index.html` is the detailed day-by-day itinerary. It reads the four choices stored by `excursions.html`, renders them on September 14–17, updates the current distance and attraction summary, and provides an overview map plus a wider-framed route map and Google Maps directions link inside each driving-day accordion. Timeline badges distinguish fixed commitments and supplier-controlled steps from unmarked, adjustable suggestions.
+- `excursions.html` is the only current option-comparison surface. Each option combines a brochure-style reviewed photo gallery, experiential description, proposed detailed timeline, compact route map, logistics, and trade-offs; it stores up to four selected car day trips in `localStorage`.
 - `old-plans.html` preserves the previous seven-route comparison. It is an archive, not a source for the current active variant stored by the main pages.
 - `attractions.html` is the attraction ranking and substitution catalogue. Keep its variant coverage consistent with the published route variants.
 - `preparation.html` is a browser-local checklist. It stores checkbox state in `localStorage`.
