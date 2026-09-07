@@ -26,8 +26,15 @@ for (const page of ['index','excursions','attractions']) {
   const html = await read(`${page}.html`);
   assert.ok(!html.includes('grecja-wycieczki-tolo'));
 }
-assert.equal((await read('excursions.html')).match(/<article class="trip"/g)?.length,8);
-assert.equal((await read('index.html')).match(/Dzień z Tolo · wybór ad hoc/g)?.length,1);
+const excursions = await read('excursions.html');
+const index = await read('index.html');
+assert.equal(excursions.match(/<article class="trip"/g)?.length,8);
+assert.equal(index.match(/Dzień z Tolo · wybór ad hoc/g)?.length,1);
+assert.match(index,/id="today-action"/);
+assert.match(index,/timeZone:'Europe\/Athens'/);
+assert.match(index,/Szybki wybór na rano/);
+assert.match(index,/Sprawdź pogodę w Tolo/);
+assert.ok(!index.includes('localStorage'));
 
 for (const page of ['index','excursions','attractions','costs','preparation','info','old-plans']) {
   const html = await read(`${page}.html`);
