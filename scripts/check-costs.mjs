@@ -33,7 +33,8 @@ assert.equal(index.match(/Dzień z Tolo · wybór ad hoc/g)?.length,1);
 assert.match(index,/id="today-action"/);
 assert.match(index,/timeZone:'Europe\/Athens'/);
 assert.match(index,/Szybki wybór na rano/);
-assert.match(index,/Sprawdź pogodę w Tolo/);
+assert.match(index,/Czas poza Tolo/);
+assert.ok(!index.includes('pogoda+Tolo'));
 assert.ok(!index.includes('localStorage'));
 
 for (const page of ['index','excursions','attractions','costs','preparation','info','old-plans']) {

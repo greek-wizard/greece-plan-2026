@@ -19,7 +19,7 @@
         <button class="site-help-close" type="button" aria-label="Zamknij pomoc">×</button>
       </div>
       <div class="site-help-grid">
-        <div class="site-help-item"><span class="site-help-icon">1</span><div><b>Wybieraj ad hoc</b><span>Na stronie Wycieczki porównaj kierunki i wybierz jeden dopiero według pogody, energii i ochoty.</span></div></div>
+        <div class="site-help-item"><span class="site-help-icon">1</span><div><b>Wybieraj ad hoc</b><span>Na stronie Wycieczki porównaj kierunki i wybierz jeden dopiero według energii, dostępnego czasu i ochoty.</span></div></div>
         <div class="site-help-item"><span class="site-help-icon">2</span><div><b>Otwieraj kolejne dni</b><span>Plan działa jak akordeon: otwarcie jednego dnia automatycznie zamyka poprzedni.</span></div></div>
         <div class="site-help-item"><span class="site-help-icon">3</span><div><b>Otwieraj mapy i zdjęcia</b><span>Trasy oraz atrakcje mają skróty do Map Google, a miniatury można powiększać.</span></div></div>
         <div class="site-help-item"><span class="site-help-icon">4</span><div><b>Porównaj atrakcje</b><span>Ranking podpowiada, kiedy warto wejść, a kiedy wystarczy spacer lub widok z zewnątrz.</span></div></div>
