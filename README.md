@@ -76,7 +76,8 @@ The pre-commit hook writes the current Warsaw date and time into the version bad
 - When adding a route or changing a variant, update the picker, comparison table, overview data, route panel, map data, attraction coverage, and any affected assumptions together.
 - Review attraction photographs visually, not only by filename or search result. The image must show the actual attraction or its landscape, avoid logos and diagrams, and remain useful on a modern phone. Store reviewed files locally and update `PHOTO_CREDITS.md` and the in-page source metadata together.
 - Treat map routing and online opening information as live data. Keep a readable fallback when OSRM or another online service is unavailable, and preserve an official source link for time-sensitive prices, hours, and suspended services.
-- Keep `.leaflet-container{isolation:isolate}` on every page with Leaflet maps. This contains the map panes and controls in their own stacking context so they cannot cover the sticky navigation or excursion chooser while scrolling, including on mobile.
+- Keep the main navigation at `z-index:2000`, `main` positioned at `z-index:0`, and Leaflet containers positioned at `z-index:0` with `isolation:isolate`. Explicit stacking levels contain map panes and controls below navigation even where isolation alone does not prevent mobile overlap. Verify both map content and controls while scrolling a narrow viewport, including the published page.
+- Keep the archived plans link out of the main navigation; it belongs in the footer of current pages.
 
 After editing the page:
 
