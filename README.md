@@ -4,11 +4,11 @@ A static, responsive website comparing travel options for three adults visiting 
 
 ## Published files
 
-- `index.html` — the detailed current itinerary generated from the four selected Tolo day trips
-- `excursions.html` — the selectable catalogue of eight car day trips from Tolo
+- `index.html` — the detailed fixed itinerary plus four open, ad-hoc days in Tolo
+- `excursions.html` — the comparison catalogue of eight possible car day trips from Tolo
 - `old-plans.html` — the archived seven-route comparison retained for reference
-- `attractions.html` — the ranked attraction list and unused alternatives
-- `costs.html` — admission costs for the current itinerary, paid bookings, and optional extras
+- `attractions.html` — the ranked attraction catalogue with practical entry advice
+- `costs.html` — an independent list of prices per person and opening hours
 - `preparation.html` — the interactive preparation checklist
 - `info.html` — shared flight details and trip-planning assumptions
 - `TRIP_ASSUMPTIONS.md` — the planning constraints and content rules
@@ -20,13 +20,13 @@ OpenStreetMap tiles and OSRM road routes are loaded online. Attraction photograp
 
 ## Project structure
 
-- `index.html` is the detailed day-by-day itinerary. It reads the four choices stored by `excursions.html`, renders them on September 14–17, updates the current distance and attraction summary, and provides an overview map plus a wider-framed route map and Google Maps directions link inside each driving-day accordion. Small timeline icons distinguish fixed commitments and supplier-controlled steps from unmarked, adjustable suggestions.
-- `excursions.html` is the only current option-comparison surface. Each option combines a brochure-style reviewed photo gallery, experiential description, proposed detailed timeline, compact route map, logistics, and trade-offs; it stores up to four selected car day trips in `localStorage`.
-- `old-plans.html` preserves the previous seven-route comparison. It is an archive, not a source for the current active variant stored by the main pages.
-- `attractions.html` is the attraction ranking and substitution catalogue. Keep its variant coverage consistent with the published route variants.
+- `index.html` is the detailed day-by-day itinerary. September 14–17 remain deliberately open: each morning the group can choose one catalogue trip, a beach or pool day, or rest. Fixed driving and coach days provide a wider-framed route map and Google Maps directions link inside each accordion. Small timeline icons distinguish fixed commitments and supplier-controlled steps from unmarked, adjustable suggestions.
+- `excursions.html` is the current option-comparison surface. Each option combines a brochure-style reviewed photo gallery, experiential description, proposed timeline, compact route map, logistics, and trade-offs. It does not save a route selection; choices are made ad hoc.
+- `old-plans.html` preserves the previous seven-route comparison. It is an archive, not a source for the current itinerary.
+- `attractions.html` is the attraction ranking and substitution catalogue. It distinguishes certain highlights, places requiring no ticket, locations best assessed from outside, and paid interiors worth considering only as the main purpose of a day.
 - `preparation.html` is a browser-local checklist of essential departure tasks. It stores checkbox state in `localStorage`; booked accommodation and the two tickets already saved offline appear in a static completed summary outside the progress count. Preserve task IDs only when their meaning remains the same.
 - `info.html` holds shared flight information and general assumptions so the main page can stay focused on comparing route options.
-- `costs.html` and `costs.js` show remaining admission costs for three adults, using the same `grecja-wycieczki-tolo` selection and default four trips as the itinerary. Paid Acropolis admission and the booked Meteora excursion are excluded from the outstanding total; monastery admissions remain payable. Optional extras apply to all three travelers and reset on a fresh page load. Unknown amounts are labeled separately, never counted as free. Run `node scripts/check-costs.mjs` after changing cost data or selection behavior.
+- `costs.html` and `costs.js` form an independent reference list. They show the public price per person, optional opening hours, paid status, and an official source link; they do not calculate totals, multiply by the group size, or read itinerary choices. Run `node scripts/check-costs.mjs` after changing cost data or presentation.
 - `site-help.js` injects the shared help dialog used across the pages.
 - `scripts/update-build-time.mjs` updates the fixed version badge on all published pages.
 - `.githooks/pre-commit` runs the timestamp updater and stages the affected HTML files.
@@ -73,7 +73,7 @@ The pre-commit hook writes the current Warsaw date and time into the version bad
 ## Content and media maintenance
 
 - Keep Polish diacritics as UTF-8 end to end. Mojibake such as `â€™`, `Ä™`, or `Å›` indicates an encoding problem and must be corrected before committing.
-- When adding a route or changing a variant, update the picker, comparison table, overview data, route panel, map data, attraction coverage, and any affected assumptions together.
+- When adding or changing a Tolo excursion, update its catalogue card, route data, attraction coverage, price reference when relevant, and any affected assumptions together.
 - Review attraction photographs visually, not only by filename or search result. The image must show the actual attraction or its landscape, avoid logos and diagrams, and remain useful on a modern phone. Store reviewed files locally and update `PHOTO_CREDITS.md` and the in-page source metadata together.
 - Treat map routing and online opening information as live data. Keep a readable fallback when OSRM or another online service is unavailable, and preserve an official source link for time-sensitive prices, hours, and suspended services.
 - Keep the main navigation at `z-index:2000`, `main` positioned at `z-index:0`, and Leaflet containers positioned at `z-index:0` with `isolation:isolate`. Explicit stacking levels contain map panes and controls below navigation even where isolation alone does not prevent mobile overlap. Verify both map content and controls while scrolling a narrow viewport, including the published page.

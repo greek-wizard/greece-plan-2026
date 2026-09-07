@@ -15,16 +15,16 @@
   dialog.innerHTML = `
     <div class="site-help-sheet">
       <div class="site-help-head">
-        <div><h2 id="site-help-title">Jak korzystać z planu?</h2><p>Plan, atrakcje i koszty uwzględniają wybrane wycieczki i działają również na telefonie.</p></div>
+        <div><h2 id="site-help-title">Jak korzystać z planu?</h2><p>Plan pokazuje pewne punkty, a katalog wycieczek pomaga wybrać pozostałe dni ad hoc. Strona działa również na telefonie.</p></div>
         <button class="site-help-close" type="button" aria-label="Zamknij pomoc">×</button>
       </div>
       <div class="site-help-grid">
-        <div class="site-help-item"><span class="site-help-icon">1</span><div><b>Wybierz wycieczki</b><span>Na stronie Wycieczki wybierz cztery wyprawy z Tolo; pojawią się w planie na 14–17 IX.</span></div></div>
+        <div class="site-help-item"><span class="site-help-icon">1</span><div><b>Wybieraj ad hoc</b><span>Na stronie Wycieczki porównaj kierunki i wybierz jeden dopiero według pogody, energii i ochoty.</span></div></div>
         <div class="site-help-item"><span class="site-help-icon">2</span><div><b>Otwieraj kolejne dni</b><span>Plan działa jak akordeon: otwarcie jednego dnia automatycznie zamyka poprzedni.</span></div></div>
         <div class="site-help-item"><span class="site-help-icon">3</span><div><b>Otwieraj mapy i zdjęcia</b><span>Trasy oraz atrakcje mają skróty do Map Google, a miniatury można powiększać.</span></div></div>
-        <div class="site-help-item"><span class="site-help-icon">4</span><div><b>Porównaj atrakcje</b><span>Ranking pokazuje ocenę, popularność i obecność miejsca w aktualnym planie.</span></div></div>
+        <div class="site-help-item"><span class="site-help-icon">4</span><div><b>Porównaj atrakcje</b><span>Ranking podpowiada, kiedy warto wejść, a kiedy wystarczy spacer lub widok z zewnątrz.</span></div></div>
         <div class="site-help-item"><span class="site-help-icon">5</span><div><b>Korzystaj z checklisty</b><span>Zaznaczenia zapisują się lokalnie na używanym urządzeniu.</span></div></div>
-        <div class="site-help-item"><span class="site-help-icon">€</span><div><b>Sprawdź koszty</b><span>Strona Koszty podsumowuje bilety do opłacenia oraz opcjonalne dodatki dla trzech osób.</span></div></div>
+        <div class="site-help-item"><span class="site-help-icon">€</span><div><b>Sprawdź ceny</b><span>Strona Koszty to niezależna lista aktualnych cen za jedną osobę, bez automatycznego budżetu.</span></div></div>
         <div class="site-help-item"><span class="site-help-icon">i</span><div><b>Sprawdź założenia</b><span>Loty, zasady wynajmu auta i wspólne informacje znajdują się na stronie Info.</span></div></div>
       </div>
       <div class="site-help-foot"><small>To okno pojawia się automatycznie tylko raz. Później można wrócić do niego ikoną „?” w menu.</small><button class="site-help-primary" type="button">Rozumiem, zaczynam</button></div>
