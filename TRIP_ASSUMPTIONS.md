@@ -38,7 +38,7 @@
 
 - User-facing travel content is written in Polish.
 - Repository documentation, filenames, and commit messages are written in English.
-- Overall trip cost estimates are intentionally deferred; verified adult admission prices may be shown beside paid attractions.
+- Overall trip cost estimates are intentionally deferred; `costs.html` summarizes remaining adult admissions for the current itinerary and optional extras, separately from already-paid bookings.
 - Each day uses an impersonal planning style and includes a three-step graphical intensity indicator, approximate main-plan duration, and a detailed timeline. Start times live in the timeline rather than in a duplicate label.
 - Day cards use a single-open accordion on every screen. Opening one day closes the previous one, and the horizontal day navigator is intentionally omitted to keep the interface simple.
 - Day labels are limited to information that changes decisions: intensity, duration, flexible time, accommodation, flight constraints, and exceptional reservation or service warnings. Days without a key attraction are explicitly marked as suitable for planning ad hoc.
@@ -58,3 +58,19 @@
 - User-facing copy should describe the journey, not explain the website interface. Keep UI instructions only where an action would otherwise be ambiguous.
 - Attraction photography is part of the planning value: use real, visually attractive views of the named place. Reject logos, maps, diagrams, generic people shots, and weak or misleading images. Prefer a building, ruin, or landscape over an isolated museum object unless the object is itself the main reason to visit. Inspect every candidate image before adding it, store a local copy, and record the source and license.
 - When a content update reveals a durable assumption, verified source, exception, or editing rule that would improve future work, record it in this file or another relevant Markdown file during the same change.
+
+## Current admission budget (verified September 7, 2026)
+
+- The user confirmed that Acropolis admission and the September 12 Meteora excursion are paid. The excursion cost EUR 65 per person / EUR 195 for three. The actual Acropolis purchase amount was not supplied: show its paid status and zero outstanding admission, without inventing its purchase cost.
+- Optional Acropolis guiding costs EUR 30 per person / EUR 90 for three, supplied by the user. It is separate from the paid entry ticket. Do not treat this as a researched public tariff or a confirmed guide reservation.
+- Remaining fixed admissions total EUR 90 per person: Acropolis Museum 20, National Archaeological Museum 20, three Meteora monasteries 15, Ancient Corinth 15, Mycenae 20. The default Tolo excursions add EUR 65: Epidaurus 20, Palamidi 20, Nemea 10, Tiryns 10, Asini 5. Default remaining total: EUR 155 per person / EUR 465 for three; with guiding: EUR 185 / EUR 555. Optional Acrocorinth adds EUR 5 / EUR 15.
+- Use the four selected day-trip IDs and their order from `grecja-wycieczki-tolo`; if a complete valid selection is unavailable, the costs page uses the itinerary defaults (epidaurus, nafplio, nemea, tiryns) without modifying the saved selection. Do not use archived route costs for this page.
+- Count combined tickets once. Mycenae includes the site, museum, and Treasury of Atreus; Corinth and Epidaurus include their museums; Nemea includes the sanctuary, museum, and stadium. The Acropolis Museum is a separate admission from the Acropolis hill.
+- Meteora monastery entry is EUR 5 per person per monastery, excluded from the booked excursion. Three interiors require EUR 45 cash for the group. Sources: https://visitmeteora.travel/faq/ and https://visitmeteora.travel/tour/meteora-day-trip-from-athens/
+- Athens sources: https://www.theacropolismuseum.gr/en/plan-your-visit and https://www.namuseum.gr/en/episkepsi/
+- Fixed transfer sources: https://www.hh.gr/en/destinations/ancient-corinth/ and https://www.hh.gr/en/destinations/mycenae/
+- Tolo excursion sources: https://www.hh.gr/en/destinations/epidaurus-asclepius-sanctuary/, https://www.hh.gr/en/destinations/palamidi-castle/, https://www.hh.gr/en/destinations/zeus-sanctuary-nemea/, https://www.hh.gr/en/destinations/tiryns/, and https://www.hh.gr/en/destinations/asine/
+- Other selected/optional admissions: Mystras EUR 20 (site and museum), Acrocorinth EUR 5, Museum of the Olive and Greek Olive Oil in Sparta EUR 6 (optional, closed Tuesdays). Sources: https://www.hh.gr/en/destinations/mystras/, https://www.hh.gr/en/destinations/acrocorinth/, and https://www.piop.gr/en/diktuo-mouseion/museum-of-the-olive-and-greek-olive-oil/
+- Kerameikos is closed until further notice for infrastructure works; remove it as an actionable optional visit on September 11 and exclude it from admission sums. The Ephorate's January 2026 announcement repeats the closure beginning May 5, 2025: https://efaathculture.gr/en/2026/01/ . The official museum directory also reports closure for works (updated May 27, 2026): https://www.archaeologicalmuseums.gr/en/museum/5df34af3deca5e2d79e8c181/archaeological-museum-of-kerameikos
+- Roman Agora is an exterior walk in the current itinerary, not a paid interior visit. Arcadia and Hydra contain walks rather than planned ticketed museums. Monemvasia's possible Agia Sofia interior admission remains unconfirmed in this budget and is explicitly marked outside the known sum. Do not turn unknown prices into zero-price claims.
+- Nemea winery/tasting prices depend on the unselected supplier and package; disclose them outside admission totals. Hydra ferries, transport, parking, food, beach services, and donations also remain outside this admission-only budget. This is not a full remaining trip budget.

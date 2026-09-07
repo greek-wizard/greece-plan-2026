@@ -8,6 +8,7 @@ A static, responsive website comparing travel options for three adults visiting 
 - `excursions.html` — the selectable catalogue of eight car day trips from Tolo
 - `old-plans.html` — the archived seven-route comparison retained for reference
 - `attractions.html` — the ranked attraction list and unused alternatives
+- `costs.html` — admission costs for the current itinerary, paid bookings, and optional extras
 - `preparation.html` — the interactive preparation checklist
 - `info.html` — shared flight details and trip-planning assumptions
 - `TRIP_ASSUMPTIONS.md` — the planning constraints and content rules
@@ -25,6 +26,7 @@ OpenStreetMap tiles and OSRM road routes are loaded online. Attraction photograp
 - `attractions.html` is the attraction ranking and substitution catalogue. Keep its variant coverage consistent with the published route variants.
 - `preparation.html` is a browser-local checklist. It stores checkbox state in `localStorage`.
 - `info.html` holds shared flight information and general assumptions so the main page can stay focused on comparing route options.
+- `costs.html` and `costs.js` show remaining admission costs for three adults, using the same `grecja-wycieczki-tolo` selection and default four trips as the itinerary. Paid Acropolis admission and the booked Meteora excursion are excluded from the outstanding total; monastery admissions remain payable. Optional extras apply to all three travelers and reset on a fresh page load. Unknown amounts are labeled separately, never counted as free. Run `node scripts/check-costs.mjs` after changing cost data or selection behavior.
 - `site-help.js` injects the shared help dialog used across the pages.
 - `scripts/update-build-time.mjs` updates the fixed version badge on all published pages.
 - `.githooks/pre-commit` runs the timestamp updater and stages the affected HTML files.
@@ -78,7 +80,7 @@ The pre-commit hook writes the current Warsaw date and time into the version bad
 After editing the page:
 
 ```powershell
-git add index.html attractions.html preparation.html info.html TRIP_ASSUMPTIONS.md README.md PHOTO_CREDITS.md images/trip .githooks scripts
+git add index.html excursions.html attractions.html costs.html costs.js preparation.html info.html TRIP_ASSUMPTIONS.md README.md PHOTO_CREDITS.md images/trip .githooks scripts
 git commit -m "Update trip plan"
 git push
 ```

@@ -11,6 +11,7 @@
 - The primary pages are:
   - `index.html` for itinerary variants, route comparison, maps, day accordions, and the main trip experience.
   - `attractions.html` for the ranked attraction catalogue and unused substitution ideas.
+  - `costs.html` and `costs.js` for current admission costs, paid bookings, and optional extras.
   - `preparation.html` for the local-browser preparation checklist.
   - `info.html` for shared flight details, assumptions, and general planning notes.
 - Shared browser behavior lives in `site-help.js`; the version timestamp updater lives in `scripts/update-build-time.mjs`.

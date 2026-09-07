@@ -4,6 +4,7 @@ const pageNames = [
   "index.html",
   "excursions.html",
   "attractions.html",
+  "costs.html",
   "preparation.html",
   "info.html",
   "old-plans.html",
