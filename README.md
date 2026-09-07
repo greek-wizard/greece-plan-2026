@@ -76,6 +76,7 @@ The pre-commit hook writes the current Warsaw date and time into the version bad
 - When adding a route or changing a variant, update the picker, comparison table, overview data, route panel, map data, attraction coverage, and any affected assumptions together.
 - Review attraction photographs visually, not only by filename or search result. The image must show the actual attraction or its landscape, avoid logos and diagrams, and remain useful on a modern phone. Store reviewed files locally and update `PHOTO_CREDITS.md` and the in-page source metadata together.
 - Treat map routing and online opening information as live data. Keep a readable fallback when OSRM or another online service is unavailable, and preserve an official source link for time-sensitive prices, hours, and suspended services.
+- Keep `.leaflet-container{isolation:isolate}` on every page with Leaflet maps. This contains the map panes and controls in their own stacking context so they cannot cover the sticky navigation or excursion chooser while scrolling, including on mobile.
 
 After editing the page:
 
