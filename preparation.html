@@ -13,18 +13,19 @@
     .version-strip{position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(8px,env(safe-area-inset-bottom));z-index:400;max-width:calc(100vw - 16px);padding:3px 6px;border:1px solid #ffffff24;border-radius:6px;background:#102d33b8;color:#e8f3f2;backdrop-filter:blur(7px);font-size:.5rem;font-weight:650;line-height:1.2;white-space:nowrap;box-shadow:0 2px 10px #071a1e33;pointer-events:none}.version-strip time{margin-left:.25em;color:white}.active-trip{max-width:106px;overflow:hidden;text-overflow:ellipsis;padding:4px 7px;border:1px solid #ffffff24;border-radius:99px;background:#ffffff0e;color:white;font-size:.64rem;font-weight:800}
     @media(min-width:801px){.site-menu{gap:8px;padding:9px 0}.site-menu a{padding:10px 16px;font-size:.88rem}}
   </style>
+  <link rel="stylesheet" href="site-nav.css">
 </head>
 <body>
-  <div class="version-strip" role="status">Wersja: <time id="build-time" datetime="2026-09-07T17:14:38.789Z">07.09.2026, 19:14 CEST</time></div>
+  <div class="version-strip" role="status">Wersja: <time id="build-time" datetime="2026-09-08T06:13:07.123Z">08.09.2026, 08:13 CEST</time></div>
   <nav class="global-nav" aria-label="Główne menu"><div class="wrap nav-row"><div class="site-menu"><a href="index.html">Plan</a><a href="excursions.html">Wycieczki</a><a href="attractions.html">Atrakcje</a><a href="costs.html">Koszty</a><a class="active" href="preparation.html">Checklista</a><a href="info.html" title="Informacje i założenia">Info</a></div></div></nav>
   <header class="top"><div class="wrap"><h1>Checklista przygotowań.</h1><p>Ostatnie sprawy przed wyjazdem: lot, dokumenty, dojazd, samochód i bagaż.</p><div class="summary" aria-live="polite"><span class="pill"><b id="done">0</b> wykonanych</span><span class="pill"><b id="left">0</b> pozostałych</span></div><div class="progress"><span id="bar"></span></div></div></header>
   <main><div class="wrap">
-    <div class="notice"><strong>Już załatwione</strong><ul><li>Noclegi w Atenach i Tolo — zarezerwowane.</li><li>Wycieczka do Meteorów — opłacona, voucher zapisany offline.</li><li>Wejście na Akropol — opłacone, bilet zapisany offline.</li></ul></div>
+    <div class="notice"><strong>Już załatwione</strong><ul><li>Noclegi w Atenach i Tolo — zarezerwowane.</li><li>Wycieczka do Meteorów — opłacona, voucher dostępny.</li><li>Wejście na Akropol — opłacone, bilet dostępny.</li></ul></div>
     <section class="group"><h2>Lot i dokumenty</h2>
       <label class="task"><input type="checkbox" data-task="flight-checkin"><span><b>Zrobić odprawę i przygotować karty pokładowe</b><small>Sprawdzić aktualne godziny lotów, limity bagażu i zaplanować dojazd na lotnisko.</small></span></label>
       <label class="task"><input type="checkbox" data-task="identity-documents"><span><b>Spakować dokumenty wszystkich trzech osób</b><small>Sprawdzić ważność dowodów lub paszportów; kierowcy zabierają prawa jazdy.</small></span></label>
-      <label class="task"><input type="checkbox" data-task="travel-insurance"><span><b>Sprawdzić ubezpieczenie podróżne</b><small>Zakres i daty ochrony dla całej grupy; zapisać polisę oraz numer assistance.</small></span></label>
-      <label class="task"><input type="checkbox" data-task="remaining-documents"><span><b>Zapisać offline potwierdzenia noclegów i wynajmu auta</b><small>Adresy, kontakty i numery rezerwacji. Bilet na Akropol i voucher do Meteorów są już zapisane.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="travel-insurance"><span><b>Sprawdzić ubezpieczenie podróżne</b><small>Zakres i daty ochrony dla wszystkich podróżnych; zapisać polisę oraz numer assistance.</small></span></label>
+      <label class="task"><input type="checkbox" data-task="booking-details"><span><b>Zebrać potwierdzenia noclegów i wynajmu auta</b><small>Adresy, kontakty i numery rezerwacji przechowywać prywatnie, poza publiczną stroną.</small></span></label>
     </section>
     <section class="group"><h2>Dojazd i zameldowanie</h2>
       <label class="task"><input type="checkbox" data-task="hotel-arrival"><span><b>Potwierdzić późne zameldowanie w Atenach i parking w Tolo</b><small>Uzgodnić przyjazd po późnym locie, sposób odbioru kluczy i zapisać kontakt do obiektów.</small></span></label>

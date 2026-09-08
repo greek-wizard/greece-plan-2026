@@ -15,14 +15,14 @@
   dialog.innerHTML = `
     <div class="site-help-sheet">
       <div class="site-help-head">
-        <div><h2 id="site-help-title">Jak korzystać z planu?</h2><p>Plan pokazuje pewne punkty, a katalog wycieczek pomaga wybrać pozostałe dni ad hoc. Strona działa również na telefonie.</p></div>
+        <div><h2 id="site-help-title">Jak korzystać z planu?</h2><p>Plan pokazuje pewne punkty oraz cztery wycieczki wybrane na dni w Tolo. Strona działa również na telefonie.</p></div>
         <button class="site-help-close" type="button" aria-label="Zamknij pomoc">×</button>
       </div>
       <div class="site-help-grid">
-        <div class="site-help-item"><span class="site-help-icon">1</span><div><b>Wybieraj ad hoc</b><span>Na stronie Wycieczki porównaj kierunki i wybierz jeden dopiero według energii, dostępnego czasu i ochoty.</span></div></div>
+        <div class="site-help-item"><span class="site-help-icon">1</span><div><b>Wybierz 4 wycieczki</b><span>Zaznacz cztery z ośmiu propozycji. Wybrane kierunki od razu pojawią się w dniach 14–17 IX.</span></div></div>
         <div class="site-help-item"><span class="site-help-icon">2</span><div><b>Otwieraj kolejne dni</b><span>Plan działa jak akordeon: otwarcie jednego dnia automatycznie zamyka poprzedni.</span></div></div>
         <div class="site-help-item"><span class="site-help-icon">3</span><div><b>Otwieraj mapy i zdjęcia</b><span>Trasy oraz atrakcje mają skróty do Map Google, a miniatury można powiększać.</span></div></div>
-        <div class="site-help-item"><span class="site-help-icon">4</span><div><b>Porównaj atrakcje</b><span>Ranking podpowiada, kiedy warto wejść, a kiedy wystarczy spacer lub widok z zewnątrz.</span></div></div>
+        <div class="site-help-item"><span class="site-help-icon">4</span><div><b>Porównaj atrakcje</b><span>Ranking obejmuje punkty planu i dodatkowe pomysły na podróż.</span></div></div>
         <div class="site-help-item"><span class="site-help-icon">5</span><div><b>Korzystaj z checklisty</b><span>Zaznaczenia zapisują się lokalnie na używanym urządzeniu.</span></div></div>
         <div class="site-help-item"><span class="site-help-icon">€</span><div><b>Sprawdź ceny</b><span>Strona Koszty to niezależna lista aktualnych cen za jedną osobę, bez automatycznego budżetu.</span></div></div>
         <div class="site-help-item"><span class="site-help-icon">i</span><div><b>Sprawdź założenia</b><span>Loty, zasady wynajmu auta i wspólne informacje znajdują się na stronie Info.</span></div></div>

@@ -20,26 +20,34 @@ assert.ok(!costs.includes('localStorage'));
 assert.ok(!costs.includes('dla 3 osób'));
 assert.ok(!costs.includes('id="base-group"'));
 assert.match(costs,/cena za osobę/i);
-assert.match(costs,/najwyżej jedno/i);
+assert.match(costs,/Muzea \(opcjonalnie\)/i);
 
 for (const page of ['index','excursions','attractions']) {
   const html = await read(`${page}.html`);
-  assert.ok(!html.includes('grecja-wycieczki-tolo'));
+  assert.ok(html.includes('grecja-wycieczki-tolo'));
 }
 const excursions = await read('excursions.html');
 const index = await read('index.html');
 assert.equal(excursions.match(/<article class="trip"/g)?.length,8);
-assert.equal(index.match(/Dzień z Tolo · wybór ad hoc/g)?.length,1);
+assert.equal(excursions.match(/stops:\[/g)?.length,8);
+assert.match(excursions,/maps\.app\.goo\.gl\/9aeaq22g48rKAstq7/);
+assert.match(excursions,/Paralia Karathonas/);
+assert.match(index,/const chosenDays=/);
+assert.match(index,/fixed\.concat\(chosenDays,last\)/);
 assert.match(index,/id="today-action"/);
 assert.match(index,/timeZone:'Europe\/Athens'/);
-assert.match(index,/Szybki wybór na rano/);
-assert.match(index,/Czas poza Tolo/);
+assert.ok(!index.includes('Szybki wybór na rano'));
+assert.ok(!index.includes('Decyzja: prosto do Tolo'));
+assert.ok(!index.includes('bez obowiązkowych wejść'));
+assert.match(index,/Muzeum Akropolu \(opcjonalnie\)/);
+assert.match(index,/Narodowe Muzeum Archeologiczne \(opcjonalnie\)/);
 assert.ok(!index.includes('pogoda+Tolo'));
-assert.ok(!index.includes('localStorage'));
+assert.ok(index.includes('localStorage'));
 
 for (const page of ['index','excursions','attractions','costs','preparation','info','old-plans']) {
   const html = await read(`${page}.html`);
   assert.match(html, /href="costs.html"/);
+  assert.match(html, /href="site-nav.css"/);
   assert.match(html, /<time id="build-time"/);
   for (const [,path] of html.matchAll(/(?:href|src)="([^"#?:]+\.(?:html|js))"/g)) await read(path);
   for (const [,script] of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)) new vm.Script(script);

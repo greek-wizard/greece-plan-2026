@@ -1,0 +1,10 @@
+.global-nav{position:sticky;top:0;z-index:2000;background:#102d33;border-bottom:1px solid #ffffff22}
+.global-nav>.wrap{width:min(1180px,calc(100% - 32px));margin:auto}
+.global-nav .nav-row{display:flex;align-items:center;gap:8px}
+.global-nav .site-menu{display:flex;flex:1;gap:4px;min-width:0;overflow-x:auto;padding:8px 0;scrollbar-width:none}
+.global-nav .site-menu::-webkit-scrollbar{display:none}
+.global-nav .site-menu a{flex:0 0 auto;white-space:nowrap;text-decoration:none;border-radius:999px;padding:8px 12px;color:#d9e8e7;font-size:.76rem;font-weight:850;line-height:1.2}
+.global-nav .site-menu a.active,.global-nav .site-menu a:hover,.global-nav .site-menu a:focus-visible{background:#fff;color:#102d33;outline:0}
+@media(min-width:801px){.global-nav .site-menu{gap:8px;padding:9px 0}.global-nav .site-menu a{padding:10px 16px;font-size:.88rem}}
+@media(max-width:480px){.global-nav>.wrap{width:min(100% - 24px,1180px)}.global-nav .site-menu a{padding:7px 9px;font-size:.68rem}}
+@media print{.global-nav{display:none}}

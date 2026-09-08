@@ -4,10 +4,10 @@ A static, responsive website comparing travel options for three adults visiting 
 
 ## Published files
 
-- `index.html` — the date-aware detailed itinerary plus four open, ad-hoc days in Tolo
-- `excursions.html` — the comparison catalogue of eight possible car day trips from Tolo
+- `index.html` — the date-aware detailed itinerary, including the four selected Tolo excursions
+- `excursions.html` — the comparison catalogue and selector for four of eight car day trips from Tolo
 - `old-plans.html` — the archived seven-route comparison retained for reference
-- `attractions.html` — the ranked attraction catalogue with practical entry advice
+- `attractions.html` — the ranked attraction catalogue and current-plan coverage
 - `costs.html` — an independent list of prices per person and opening hours
 - `preparation.html` — the interactive preparation checklist
 - `info.html` — shared flight details and trip-planning assumptions
@@ -20,14 +20,14 @@ OpenStreetMap tiles and OSRM road routes are loaded online. Attraction photograp
 
 ## Project structure
 
-- `index.html` is the detailed day-by-day itinerary. Its “Today” strip uses the current date in the Europe/Athens time zone, opens the matching trip day, and links to it without storing state. Before the trip it points to September 9; after the trip it points to September 18. September 14–17 remain deliberately open: each morning the group can use the compact time-available/energy/driving/admission decision panel to choose one catalogue trip, a beach or pool day, or rest. Fixed driving and coach days provide a wider-framed route map and Google Maps directions link inside each accordion. Small timeline icons distinguish fixed commitments and supplier-controlled steps from unmarked, adjustable suggestions.
-- `excursions.html` is the current option-comparison surface. Each option combines a brochure-style reviewed photo gallery, experiential description, proposed timeline, compact route map, logistics, and trade-offs. It does not save a route selection; choices are made ad hoc.
+- `index.html` is the detailed day-by-day itinerary. Its “Today” strip uses the current date in the Europe/Athens time zone, opens the matching trip day, and links to it without storing state. Before the trip it points to September 9; after the trip it points to September 18. September 14–17 display the four excursions saved by the selector. Fixed driving, coach, and selected excursion days provide a route map and Google Maps directions link inside each accordion. Small timeline icons distinguish fixed commitments and supplier-controlled steps from unmarked, adjustable suggestions.
+- `excursions.html` is the current option-comparison surface. Each option combines a brochure-style reviewed photo gallery, experiential description, proposed timeline, compact route map, Google Maps directions, logistics, and trade-offs. Exactly four selections are stored in browser `localStorage` under `grecja-wycieczki-tolo` and appear on `index.html` and in attraction coverage.
 - `old-plans.html` preserves the previous seven-route comparison. It is an archive, not a source for the current itinerary.
-- `attractions.html` is the attraction ranking and substitution catalogue. It distinguishes certain highlights, places requiring no ticket, locations best assessed from outside, and paid interiors worth considering only as the main purpose of a day.
-- `preparation.html` is a browser-local checklist of essential departure tasks. It stores checkbox state in `localStorage`; booked accommodation and the two tickets already saved offline appear in a static completed summary outside the progress count. Preserve task IDs only when their meaning remains the same.
+- `attractions.html` is the attraction ranking and substitution catalogue. It marks which places belong to the current selection of four Tolo excursions without changing the underlying ranking list.
+- `preparation.html` is a browser-local checklist of essential departure tasks. It stores checkbox state in `localStorage`; booked accommodation and the two paid tickets appear in a static completed summary outside the progress count. Preserve task IDs only when their meaning remains the same.
 - `info.html` holds shared flight information and general assumptions so the main page can stay focused on comparing route options.
 - `costs.html` and `costs.js` form an independent reference list. They show the public price per person, optional opening hours, paid status, and an official source link; they do not calculate totals, multiply by the group size, or read itinerary choices. Run `node scripts/check-costs.mjs` after changing cost data or presentation.
-- `site-help.js` injects the shared help dialog used across the pages.
+- `site-help.js` injects the shared help dialog used across the pages; `site-nav.css` keeps the main navigation consistent.
 - `scripts/update-build-time.mjs` updates the fixed version badge on all published pages.
 - `.githooks/pre-commit` runs the timestamp updater and stages the affected HTML files.
 - `images/trip/` contains reviewed local attraction photos. Photo source and license policy lives in `PHOTO_CREDITS.md`.
