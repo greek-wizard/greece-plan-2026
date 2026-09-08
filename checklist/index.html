@@ -15,6 +15,11 @@
     .eyebrow{margin:0 0 10px;color:#bcd5d6;font-size:.75rem;font-weight:850;letter-spacing:.11em;text-transform:uppercase}
     .top h1{margin:0 0 12px;font:clamp(2.6rem,7vw,5.2rem)/.95 Georgia,serif}
     .top p{max-width:690px;margin:0;color:#d8e6e5;line-height:1.6}
+    .variant-picker{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:20px}
+    .variant-picker strong{margin-right:4px;font-size:.82rem}
+    .variant-button{border:1px solid #ffffff55;border-radius:99px;background:#ffffff0e;color:white;padding:8px 14px;font-weight:850;cursor:pointer}
+    .variant-button[aria-pressed="true"]{border-color:white;background:white;color:var(--navy)}
+    .variant-button:hover,.variant-button:focus-visible{border-color:white;outline:0}
     .summary{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
     .pill{border:1px solid #ffffff44;border-radius:99px;padding:8px 12px}
     .progress{height:10px;margin-top:18px;overflow:hidden;border-radius:99px;background:#ffffff28}
@@ -31,16 +36,21 @@
     .actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:25px}
     .button{border:0;border-radius:9px;background:var(--navy);color:white;padding:11px 14px;font-weight:850;cursor:pointer}
     .muted{color:var(--muted);font-size:.8rem}
-    @media(max-width:560px){.wrap{width:min(100% - 24px,900px)}.top{padding:38px 0 32px}.task{padding:13px 14px}.group h2{padding-inline:14px}.actions{align-items:flex-start;flex-direction:column}}
-    @media print{.top{background:white;color:var(--ink);padding:20px 0}.top p,.progress,.actions,.notice{display:none}.group{break-inside:avoid}.task:has(input:checked) span{text-decoration:none;color:var(--ink)}}
+    @media(max-width:560px){.wrap{width:min(100% - 24px,900px)}.top{padding:38px 0 32px}.variant-picker{margin-top:16px}.task{padding:13px 14px}.group h2{padding-inline:14px}.actions{align-items:flex-start;flex-direction:column}}
+    @media print{.top{background:white;color:var(--ink);padding:20px 0}.top p,.variant-picker,.progress,.actions,.notice{display:none}.group{break-inside:avoid}.task:has(input:checked) span{text-decoration:none;color:var(--ink)}}
   </style>
 </head>
 <body>
   <header class="top">
     <div class="wrap">
-      <p class="eyebrow">9–18 września 2026 · jeden mężczyzna</p>
+      <p class="eyebrow">9–18 września 2026 · <span id="variant-name">wariant męski</span></p>
       <h1>Lista do spakowania.</h1>
       <p>Dziesięć dni w Grecji bez prania po drodze. Zestaw dopasowany do temperatur 29–35°C w dzień i 19–25°C w nocy, bez prognozowanych opadów.</p>
+      <div class="variant-picker" role="group" aria-label="Wariant checklisty">
+        <strong>Wariant:</strong>
+        <button class="variant-button" type="button" data-select-variant="man" aria-pressed="true">Mężczyzna</button>
+        <button class="variant-button" type="button" data-select-variant="woman" aria-pressed="false">Kobieta</button>
+      </div>
       <div class="summary" aria-live="polite">
         <span class="pill"><b id="done">0</b> spakowanych</span>
         <span class="pill"><b id="left">0</b> pozostałych</span>
@@ -50,9 +60,9 @@
   </header>
   <main>
     <div class="wrap">
-      <div class="notice"><strong>Ważne:</strong> do Meteorów potrzebne są długie spodnie oraz koszulka lub koszula zakrywająca ramiona. Podane liczby obejmują rzeczy założone na podróż.</div>
+      <div class="notice" id="variant-notice"><strong>Ważne:</strong> do Meteorów potrzebne są długie spodnie oraz koszulka lub koszula zakrywająca ramiona. Podane liczby obejmują rzeczy założone na podróż.</div>
 
-      <section class="group">
+      <section class="group" data-variant="man">
         <h2>Buty i dodatki</h2>
         <label class="task"><input type="checkbox" data-task="shoes-sport"><span>1 para wygodnych butów sportowych z bieżnikiem</span></label>
         <label class="task"><input type="checkbox" data-task="shoes-canvas"><span>1 para przewiewnych trampek</span></label>
@@ -63,7 +73,7 @@
         <label class="task"><input type="checkbox" data-task="sunglasses"><span>1 para okularów przeciwsłonecznych</span></label>
       </section>
 
-      <section class="group">
+      <section class="group" data-variant="man">
         <h2>Ubrania</h2>
         <label class="task"><input type="checkbox" data-task="tshirts"><span>10 lekkich T-shirtów</span></label>
         <label class="task"><input type="checkbox" data-task="shirt-smart"><span>1 lekka koszula lub koszulka polo</span></label>
@@ -73,6 +83,34 @@
         <label class="task"><input type="checkbox" data-task="sweatshirt"><span>1 bardzo cienka bluza rozpinana do samolotu i klimatyzowanego autokaru</span></label>
         <label class="task"><input type="checkbox" data-task="swimwear"><span>2 pary kąpielówek</span></label>
         <label class="task"><input type="checkbox" data-task="underwear"><span>11 par bokserek lub slipów</span></label>
+        <label class="task"><input type="checkbox" data-task="socks"><span>10 par cienkich skarpet</span></label>
+        <label class="task"><input type="checkbox" data-task="sleepwear"><span>1 lekki komplet do spania</span></label>
+      </section>
+
+      <section class="group" data-variant="woman" hidden>
+        <h2>Buty i dodatki</h2>
+        <label class="task"><input type="checkbox" data-task="shoes-sport"><span>1 para wygodnych butów sportowych z bieżnikiem</span></label>
+        <label class="task"><input type="checkbox" data-task="shoes-light"><span>1 para lekkich butów miejskich lub sandałów zapinanych z tyłu</span></label>
+        <label class="task"><input type="checkbox" data-task="shoes-flip-flops"><span>1 para klapek</span></label>
+        <label class="task"><input type="checkbox" data-task="shoes-water"><span>Opcjonalnie: 1 para butów do wody</span></label>
+        <label class="task"><input type="checkbox" data-task="hat"><span>1 czapka z daszkiem lub kapelusz</span></label>
+        <label class="task"><input type="checkbox" data-task="sunglasses"><span>1 para okularów przeciwsłonecznych</span></label>
+        <label class="task"><input type="checkbox" data-task="scarf"><span>1 duża lekka chusta lub pareo na plażę i do klasztorów</span></label>
+      </section>
+
+      <section class="group" data-variant="woman" hidden>
+        <h2>Ubrania</h2>
+        <label class="task"><input type="checkbox" data-task="tops"><span>8 lekkich T-shirtów lub topów</span></label>
+        <label class="task"><input type="checkbox" data-task="blouse-smart"><span>1 lekka bluzka lub koszula na kolację</span></label>
+        <label class="task"><input type="checkbox" data-task="shirt-long"><span>1 cienka koszula z długim rękawem</span></label>
+        <label class="task"><input type="checkbox" data-task="shorts"><span>3 pary krótkich spodni</span></label>
+        <label class="task"><input type="checkbox" data-task="summer-dress"><span>1 lekka sukienka letnia</span></label>
+        <label class="task"><input type="checkbox" data-task="trousers"><span>1 para lekkich długich spodni</span></label>
+        <label class="task"><input type="checkbox" data-task="long-skirt"><span>1 lekka spódnica za kolano do klasztorów w Meteorach</span></label>
+        <label class="task"><input type="checkbox" data-task="cardigan"><span>1 bardzo cienki kardigan lub bluza do samolotu i klimatyzowanego autokaru</span></label>
+        <label class="task"><input type="checkbox" data-task="swimwear"><span>2 stroje kąpielowe</span></label>
+        <label class="task"><input type="checkbox" data-task="underwear"><span>11 par majtek</span></label>
+        <label class="task"><input type="checkbox" data-task="bras"><span>4 biustonosze, w tym 1 sportowy</span></label>
         <label class="task"><input type="checkbox" data-task="socks"><span>10 par cienkich skarpet</span></label>
         <label class="task"><input type="checkbox" data-task="sleepwear"><span>1 lekki komplet do spania</span></label>
       </section>
@@ -117,7 +155,7 @@
         <label class="task"><input type="checkbox" data-task="daypack"><span>Mały, wygodny plecak dzienny</span></label>
         <label class="task"><input type="checkbox" data-task="sunscreen"><span>Krem przeciwsłoneczny SPF 50</span></label>
         <label class="task"><input type="checkbox" data-task="quick-dry-towel"><span>Mały ręcznik szybkoschnący</span></label>
-        <label class="task"><input type="checkbox" data-task="wet-bag"><span>Worek na mokre kąpielówki</span></label>
+        <label class="task"><input type="checkbox" data-task="wet-bag"><span>Worek na mokry strój kąpielowy</span></label>
         <label class="task"><input type="checkbox" data-task="laundry-bag"><span>Torba lub worek na brudną bieliznę</span></label>
         <label class="task"><input type="checkbox" data-task="zip-bags"><span>Kilka woreczków strunowych</span></label>
         <label class="task"><input type="checkbox" data-task="tissues"><span>Chusteczki higieniczne</span></label>
@@ -126,7 +164,7 @@
         <label class="task"><input type="checkbox" data-task="folding-bag"><span>Składana torba na zakupy lub plażę</span></label>
       </section>
 
-      <section class="group">
+      <section class="group" data-variant="man">
         <h2>Kosmetyki</h2>
         <label class="task"><input type="checkbox" data-task="toothbrush"><span>Szczoteczka do zębów</span></label>
         <label class="task"><input type="checkbox" data-task="toothpaste"><span>Pasta do zębów</span></label>
@@ -137,6 +175,24 @@
         <label class="task"><input type="checkbox" data-task="comb"><span>Grzebień lub szczotka</span></label>
         <label class="task"><input type="checkbox" data-task="hair-pomade"><span>Pomada do włosów</span></label>
         <label class="task"><input type="checkbox" data-task="face-cream"><span>Krem do twarzy</span></label>
+        <label class="task"><input type="checkbox" data-task="after-sun"><span>Preparat po opalaniu</span></label>
+      </section>
+
+      <section class="group" data-variant="woman" hidden>
+        <h2>Kosmetyki</h2>
+        <label class="task"><input type="checkbox" data-task="toothbrush"><span>Szczoteczka do zębów</span></label>
+        <label class="task"><input type="checkbox" data-task="toothpaste"><span>Pasta do zębów</span></label>
+        <label class="task"><input type="checkbox" data-task="deodorant"><span>Dezodorant lub antyperspirant</span></label>
+        <label class="task"><input type="checkbox" data-task="shower-gel"><span>Żel pod prysznic</span></label>
+        <label class="task"><input type="checkbox" data-task="shampoo"><span>Szampon</span></label>
+        <label class="task"><input type="checkbox" data-task="conditioner"><span>Odżywka do włosów</span></label>
+        <label class="task"><input type="checkbox" data-task="shaving"><span>Maszynka do golenia</span></label>
+        <label class="task"><input type="checkbox" data-task="hairbrush"><span>Szczotka lub grzebień</span></label>
+        <label class="task"><input type="checkbox" data-task="hair-accessories"><span>Gumki i spinki do włosów</span></label>
+        <label class="task"><input type="checkbox" data-task="face-cleanser"><span>Kosmetyk do mycia lub demakijażu twarzy</span></label>
+        <label class="task"><input type="checkbox" data-task="face-cream"><span>Krem do twarzy</span></label>
+        <label class="task"><input type="checkbox" data-task="makeup"><span>Używane kosmetyki do makijażu</span></label>
+        <label class="task"><input type="checkbox" data-task="hygiene-products"><span>Środki higieniczne potrzebne podczas wyjazdu</span></label>
         <label class="task"><input type="checkbox" data-task="after-sun"><span>Preparat po opalaniu</span></label>
       </section>
 
@@ -164,14 +220,25 @@
   </main>
   <script>
     const boxes=[...document.querySelectorAll('[data-task]')];
-    const key='greece-2026-private-packing-v1';
-    let saved={};
-    try{const parsed=JSON.parse(localStorage.getItem(key)||'{}');if(parsed&&typeof parsed==='object'&&!Array.isArray(parsed))saved=parsed}catch{}
-    boxes.forEach(box=>{box.checked=!!saved[box.dataset.task];box.addEventListener('change',save)});
-    function save(){saved=Object.fromEntries(boxes.map(box=>[box.dataset.task,box.checked]));try{localStorage.setItem(key,JSON.stringify(saved))}catch{}render()}
-    function render(){const done=boxes.filter(box=>box.checked).length;document.querySelector('#done').textContent=done;document.querySelector('#left').textContent=boxes.length-done;document.querySelector('#bar').style.width=`${boxes.length?done/boxes.length*100:0}%`}
-    document.querySelector('#reset').addEventListener('click',()=>{if(!confirm('Wyczyścić wszystkie zaznaczenia?'))return;boxes.forEach(box=>box.checked=false);save()});
-    render();
+    const variantSections=[...document.querySelectorAll('[data-variant]')];
+    const variantButtons=[...document.querySelectorAll('[data-select-variant]')];
+    const storageKeys={man:'greece-2026-private-packing-v1',woman:'greece-2026-private-packing-woman-v1'};
+    const variantKey='greece-2026-private-packing-variant-v1';
+    const notices={
+      man:'<strong>Ważne:</strong> do Meteorów potrzebne są długie spodnie oraz koszulka lub koszula zakrywająca ramiona. Podane liczby obejmują rzeczy założone na podróż.',
+      woman:'<strong>Ważne:</strong> do klasztorów w Meteorach potrzebne są zakryte ramiona oraz spódnica lub sukienka sięgająca za kolano. Lekka chusta lub pareo będzie dodatkowym zabezpieczeniem. Podane liczby obejmują rzeczy założone na podróż.'
+    };
+    let variant='man';
+    try{const stored=localStorage.getItem(variantKey);if(stored==='man'||stored==='woman')variant=stored}catch{}
+    function activeBoxes(){return boxes.filter(box=>{const section=box.closest('[data-variant]');return !section||section.dataset.variant===variant})}
+    function readSaved(){try{const parsed=JSON.parse(localStorage.getItem(storageKeys[variant])||'{}');return parsed&&typeof parsed==='object'&&!Array.isArray(parsed)?parsed:{}}catch{return {}}}
+    function save(){const saved=Object.fromEntries(activeBoxes().map(box=>[box.dataset.task,box.checked]));try{localStorage.setItem(storageKeys[variant],JSON.stringify(saved))}catch{}renderProgress()}
+    function renderProgress(){const current=activeBoxes(),done=current.filter(box=>box.checked).length;document.querySelector('#done').textContent=done;document.querySelector('#left').textContent=current.length-done;document.querySelector('#bar').style.width=`${current.length?done/current.length*100:0}%`}
+    function showVariant(next){variant=next;variantSections.forEach(section=>section.hidden=section.dataset.variant!==variant);variantButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.selectVariant===variant)));document.querySelector('#variant-name').textContent=variant==='man'?'wariant męski':'wariant kobiecy';document.querySelector('#variant-notice').innerHTML=notices[variant];const saved=readSaved();activeBoxes().forEach(box=>box.checked=!!saved[box.dataset.task]);try{localStorage.setItem(variantKey,variant)}catch{}renderProgress()}
+    boxes.forEach(box=>box.addEventListener('change',save));
+    variantButtons.forEach(button=>button.addEventListener('click',()=>showVariant(button.dataset.selectVariant)));
+    document.querySelector('#reset').addEventListener('click',()=>{if(!confirm(`Wyczyścić zaznaczenia wariantu ${variant==='man'?'męskiego':'kobiecego'}?`))return;activeBoxes().forEach(box=>box.checked=false);save()});
+    showVariant(variant);
   </script>
 </body>
 </html>
