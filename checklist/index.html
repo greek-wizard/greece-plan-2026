@@ -15,17 +15,20 @@
     .eyebrow{margin:0 0 10px;color:#bcd5d6;font-size:.75rem;font-weight:850;letter-spacing:.11em;text-transform:uppercase}
     .top h1{margin:0 0 12px;font:clamp(2.6rem,7vw,5.2rem)/.95 Georgia,serif}
     .top p{max-width:690px;margin:0;color:#d8e6e5;line-height:1.6}
-    .variant-picker{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:20px}
+    .controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:20px}
+    .variant-picker{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
     .variant-picker strong{margin-right:4px;font-size:.82rem}
-    .variant-button{border:1px solid #ffffff55;border-radius:99px;background:#ffffff0e;color:white;padding:8px 14px;font-weight:850;cursor:pointer}
-    .variant-button[aria-pressed="true"]{border-color:white;background:white;color:var(--navy)}
-    .variant-button:hover,.variant-button:focus-visible{border-color:white;outline:0}
+    .variant-button,.filter-button{border:1px solid #ffffff55;border-radius:99px;background:#ffffff0e;color:white;padding:8px 14px;font-weight:850;cursor:pointer}
+    .variant-button[aria-pressed="true"],.filter-button[aria-pressed="true"]{border-color:white;background:white;color:var(--navy)}
+    .variant-button:hover,.variant-button:focus-visible,.filter-button:hover,.filter-button:focus-visible{border-color:white;outline:0}
+    .filter-button{margin-left:auto}
     .summary{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
     .pill{border:1px solid #ffffff44;border-radius:99px;padding:8px 12px}
     .progress{height:10px;margin-top:18px;overflow:hidden;border-radius:99px;background:#ffffff28}
     .progress span{display:block;width:0;height:100%;background:var(--sun);transition:width .25s}
     main{padding:36px 0 64px}
     .notice{margin-bottom:26px;padding:15px 17px;border-left:4px solid var(--sun);border-radius:0 10px 10px 0;background:#fff4e5;line-height:1.55}
+    .empty{margin:26px 0;padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--white);text-align:center;font:1.35rem Georgia,serif}
     .group{margin:14px 0;overflow:hidden;border:1px solid var(--line);border-radius:16px;background:var(--white)}
     .group h2{margin:0;padding:20px 20px 12px;font:1.55rem Georgia,serif}
     .task{display:grid;grid-template-columns:28px 1fr;gap:11px;padding:13px 20px;border-top:1px solid var(--line);cursor:pointer}
@@ -36,8 +39,8 @@
     .actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:25px}
     .button{border:0;border-radius:9px;background:var(--navy);color:white;padding:11px 14px;font-weight:850;cursor:pointer}
     .muted{color:var(--muted);font-size:.8rem}
-    @media(max-width:560px){.wrap{width:min(100% - 24px,900px)}.top{padding:38px 0 32px}.variant-picker{margin-top:16px}.task{padding:13px 14px}.group h2{padding-inline:14px}.actions{align-items:flex-start;flex-direction:column}}
-    @media print{.top{background:white;color:var(--ink);padding:20px 0}.top p,.variant-picker,.progress,.actions,.notice{display:none}.group{break-inside:avoid}.task:has(input:checked) span{text-decoration:none;color:var(--ink)}}
+    @media(max-width:560px){.wrap{width:min(100% - 24px,900px)}.top{padding:38px 0 32px}.controls{align-items:flex-start;flex-direction:column;margin-top:16px}.filter-button{margin-left:0}.task{padding:13px 14px}.group h2{padding-inline:14px}.actions{align-items:flex-start;flex-direction:column}}
+    @media print{.top{background:white;color:var(--ink);padding:20px 0}.top p,.controls,.progress,.actions,.notice{display:none}.group{break-inside:avoid}.task:has(input:checked) span{text-decoration:none;color:var(--ink)}}
   </style>
 </head>
 <body>
@@ -46,10 +49,13 @@
       <p class="eyebrow">9–18 września 2026 · <span id="variant-name">wariant męski</span></p>
       <h1>Lista do spakowania.</h1>
       <p>Dziesięć dni w Grecji bez prania po drodze. Zestaw dopasowany do temperatur 29–35°C w dzień i 19–25°C w nocy, bez prognozowanych opadów.</p>
-      <div class="variant-picker" role="group" aria-label="Wariant checklisty">
-        <strong>Wariant:</strong>
-        <button class="variant-button" type="button" data-select-variant="man" aria-pressed="true">Mężczyzna</button>
-        <button class="variant-button" type="button" data-select-variant="woman" aria-pressed="false">Kobieta</button>
+      <div class="controls">
+        <div class="variant-picker" role="group" aria-label="Wariant checklisty">
+          <strong>Wariant:</strong>
+          <button class="variant-button" type="button" data-select-variant="man" aria-pressed="true">Mężczyzna</button>
+          <button class="variant-button" type="button" data-select-variant="woman" aria-pressed="false">Kobieta</button>
+        </div>
+        <button class="filter-button" type="button" id="unpacked-filter" aria-pressed="false">Pokaż tylko niespakowane</button>
       </div>
       <div class="summary" aria-live="polite">
         <span class="pill"><b id="done">0</b> spakowanych</span>
@@ -61,6 +67,7 @@
   <main>
     <div class="wrap">
       <div class="notice" id="variant-notice"><strong>Ważne:</strong> do Meteorów potrzebne są długie spodnie oraz koszulka lub koszula zakrywająca ramiona. Podane liczby obejmują rzeczy założone na podróż.</div>
+      <div class="empty" id="empty" hidden>Wszystko spakowane — na liście nie ma już otwartych pozycji.</div>
 
       <section class="group" data-variant="man">
         <h2>Buty i dodatki</h2>
@@ -224,19 +231,25 @@
     const variantButtons=[...document.querySelectorAll('[data-select-variant]')];
     const storageKeys={man:'greece-2026-private-packing-v1',woman:'greece-2026-private-packing-woman-v1'};
     const variantKey='greece-2026-private-packing-variant-v1';
+    const filterKey='greece-2026-private-packing-unpacked-filter-v1';
+    const filterButton=document.querySelector('#unpacked-filter');
     const notices={
       man:'<strong>Ważne:</strong> do Meteorów potrzebne są długie spodnie oraz koszulka lub koszula zakrywająca ramiona. Podane liczby obejmują rzeczy założone na podróż.',
       woman:'<strong>Ważne:</strong> do klasztorów w Meteorach potrzebne są zakryte ramiona oraz spódnica lub sukienka sięgająca za kolano. Lekka chusta lub pareo będzie dodatkowym zabezpieczeniem. Podane liczby obejmują rzeczy założone na podróż.'
     };
     let variant='man';
+    let unpackedOnly=false;
     try{const stored=localStorage.getItem(variantKey);if(stored==='man'||stored==='woman')variant=stored}catch{}
+    try{unpackedOnly=localStorage.getItem(filterKey)==='1'}catch{}
     function activeBoxes(){return boxes.filter(box=>{const section=box.closest('[data-variant]');return !section||section.dataset.variant===variant})}
     function readSaved(){try{const parsed=JSON.parse(localStorage.getItem(storageKeys[variant])||'{}');return parsed&&typeof parsed==='object'&&!Array.isArray(parsed)?parsed:{}}catch{return {}}}
     function save(){const saved=Object.fromEntries(activeBoxes().map(box=>[box.dataset.task,box.checked]));try{localStorage.setItem(storageKeys[variant],JSON.stringify(saved))}catch{}renderProgress()}
-    function renderProgress(){const current=activeBoxes(),done=current.filter(box=>box.checked).length;document.querySelector('#done').textContent=done;document.querySelector('#left').textContent=current.length-done;document.querySelector('#bar').style.width=`${current.length?done/current.length*100:0}%`}
+    function renderFilter(){boxes.forEach(box=>box.closest('.task').hidden=unpackedOnly&&box.checked);document.querySelectorAll('.group').forEach(group=>{if(group.dataset.variant&&group.dataset.variant!==variant){group.hidden=true;return}group.hidden=unpackedOnly&&![...group.querySelectorAll('.task')].some(task=>!task.hidden)});filterButton.setAttribute('aria-pressed',String(unpackedOnly));filterButton.textContent=unpackedOnly?'Pokaż wszystkie':'Pokaż tylko niespakowane';document.querySelector('#empty').hidden=!unpackedOnly||activeBoxes().some(box=>!box.checked)}
+    function renderProgress(){const current=activeBoxes(),done=current.filter(box=>box.checked).length;document.querySelector('#done').textContent=done;document.querySelector('#left').textContent=current.length-done;document.querySelector('#bar').style.width=`${current.length?done/current.length*100:0}%`;renderFilter()}
     function showVariant(next){variant=next;variantSections.forEach(section=>section.hidden=section.dataset.variant!==variant);variantButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.selectVariant===variant)));document.querySelector('#variant-name').textContent=variant==='man'?'wariant męski':'wariant kobiecy';document.querySelector('#variant-notice').innerHTML=notices[variant];const saved=readSaved();activeBoxes().forEach(box=>box.checked=!!saved[box.dataset.task]);try{localStorage.setItem(variantKey,variant)}catch{}renderProgress()}
     boxes.forEach(box=>box.addEventListener('change',save));
     variantButtons.forEach(button=>button.addEventListener('click',()=>showVariant(button.dataset.selectVariant)));
+    filterButton.addEventListener('click',()=>{unpackedOnly=!unpackedOnly;try{localStorage.setItem(filterKey,unpackedOnly?'1':'0')}catch{}renderFilter()});
     document.querySelector('#reset').addEventListener('click',()=>{if(!confirm(`Wyczyścić zaznaczenia wariantu ${variant==='man'?'męskiego':'kobiecego'}?`))return;activeBoxes().forEach(box=>box.checked=false);save()});
     showVariant(variant);
   </script>
