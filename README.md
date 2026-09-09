@@ -7,10 +7,10 @@ A static, responsive website comparing travel options for three adults visiting 
 - `index.html` — the date-aware detailed itinerary, including the four selected Tolo excursions
 - `excursions.html` — the comparison catalogue and selector for four of eight car day trips from Tolo
 - `old-plans.html` — the archived seven-route comparison retained for reference
-- `attractions.html` — the ranked attraction catalogue and current-plan coverage
+- `attractions.html` — the ranked attraction catalogue with current-plan highlighting
 - `costs.html` — an independent list of prices per person and opening hours
 - `preparation.html` — the interactive preparation checklist
-- `info.html` — shared flight details and trip-planning assumptions
+- `info.html` — practical flight, transport, car, and ticket information
 - `TRIP_ASSUMPTIONS.md` — the planning constraints and content rules
 - `PHOTO_CREDITS.md` — photo-source and license policy
 - `images/trip/` — manually reviewed, locally stored attraction photographs
@@ -21,12 +21,12 @@ OpenStreetMap tiles and OSRM road routes are loaded online. Attraction photograp
 ## Project structure
 
 - `index.html` is the detailed day-by-day itinerary. Its “Today” strip uses the current date in the Europe/Athens time zone, opens the matching trip day, and links to it without storing state. Before the trip it points to September 9; after the trip it points to September 18. September 14–17 display the four excursions saved by the selector. Fixed driving, coach, and selected excursion days provide a route map and Google Maps directions link inside each accordion. Small timeline icons distinguish fixed commitments and supplier-controlled steps from unmarked, adjustable suggestions.
-- `excursions.html` is the current option-comparison surface. Each option combines a brochure-style reviewed photo gallery, experiential description, proposed timeline, compact route map, Google Maps directions, logistics, and trade-offs. Exactly four selections are stored in browser `localStorage` under `grecja-wycieczki-tolo` and appear on `index.html` and in attraction coverage.
+- `excursions.html` is the current option-comparison surface. Each option combines a reviewed photo gallery, concise description, proposed timeline, compact route map, Google Maps directions, and useful logistics. Exactly four selections are stored in browser `localStorage` under `grecja-wycieczki-tolo` and appear on `index.html` and in attraction coverage.
 - `old-plans.html` preserves the previous seven-route comparison. It is an archive, not a source for the current itinerary.
 - `attractions.html` is the attraction ranking and substitution catalogue. It marks which places belong to the current selection of four Tolo excursions without changing the underlying ranking list.
 - `preparation.html` is a browser-local checklist of essential departure tasks. It stores checkbox state in `localStorage`; booked accommodation and the two paid tickets appear in a static completed summary outside the progress count. Preserve task IDs only when their meaning remains the same.
-- `info.html` holds shared flight information and general assumptions so the main page can stay focused on comparing route options.
-- `costs.html` and `costs.js` form an independent reference list. They show the public price per person, optional opening hours, paid status, and an official source link; they do not calculate totals, multiply by the group size, or read itinerary choices. Run `node scripts/check-costs.mjs` after changing cost data or presentation.
+- `info.html` holds practical flight, transport, car, and ticket information. Planning assumptions remain in `TRIP_ASSUMPTIONS.md` instead of being repeated to travelers.
+- `costs.html` and `costs.js` form an independent reference list. The visible cards show only the public price per person and optional opening hours; source links remain in the data for maintenance. The page does not calculate totals, multiply by the group size, or read itinerary choices. Run `node scripts/check-costs.mjs` after changing cost data or presentation.
 - `site-help.js` injects the shared help dialog used across the pages; `site-nav.css` keeps the main navigation consistent.
 - `scripts/update-build-time.mjs` updates the fixed version badge on all published pages.
 - `.githooks/pre-commit` runs the timestamp updater and stages the affected HTML files.
@@ -35,6 +35,8 @@ OpenStreetMap tiles and OSRM road routes are loaded online. Attraction photograp
 - `AGENTS.md` contains Codex-specific workflow and maintenance instructions.
 
 When future work uncovers a project convention, verified source, maintenance step, or recurring pitfall that would help future contributors, add it to the relevant Markdown file during the same change.
+
+User-facing copy should stay concise and actionable. Do not turn internal assumptions, rejected ideas, or negative instructions into visible labels such as “without X,” “not Y,” or explanations of why an option was omitted. Keep that context in `TRIP_ASSUMPTIONS.md` when it is useful for maintenance.
 
 ## Local preview
 

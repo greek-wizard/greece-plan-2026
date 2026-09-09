@@ -3,8 +3,8 @@
   const hh = slug => `https://www.hh.gr/en/destinations/${slug}/`;
   const prices = {
     confirmed: [
-      {name:'Akropol', price:'30 €', status:'bilet opłacony · cena oficjalna', hours:'10 IX: 08:00–19:30; wejście z rezerwacji 17:00–18:00.', source:hh('acropolis-of-athens')},
-      {name:'Wycieczka do Meteorów', price:'65 €', status:'wycieczka opłacona', source:'https://visitmeteora.travel/tour/meteora-day-trip-from-athens/'},
+      {name:'Akropol', price:'30 €', hours:'10 IX: 08:00–19:30; wejście z rezerwacji 17:00–18:00.', source:hh('acropolis-of-athens')},
+      {name:'Wycieczka do Meteorów', price:'65 €', source:'https://visitmeteora.travel/tour/meteora-day-trip-from-athens/'},
       {name:'Klasztor w Meteorach', price:'5 €', source:'https://visitmeteora.travel/faq/'}
     ],
     museums: [
@@ -25,7 +25,7 @@
   };
   globalThis.TripPrices = prices;
   if (typeof document === 'undefined') return;
-  const render = item => `<article class="price-item"><div><h3>${item.name}</h3><p>${item.hours?`<span class="hours">${item.hours}</span>`:''}<a href="${item.source}" target="_blank" rel="noopener">Oficjalne informacje ↗</a></p></div><div class="price">${item.price}<span class="paid">${item.status||'za osobę'}</span></div></article>`;
+  const render = item => `<article class="price-item"><div><h3>${item.name}</h3>${item.hours?`<p><span class="hours">${item.hours}</span></p>`:''}</div><div class="price">${item.price}<span class="paid">za osobę</span></div></article>`;
   document.querySelector('#confirmed-prices').innerHTML=prices.confirmed.map(render).join('');
   document.querySelector('#museum-prices').innerHTML=prices.museums.map(render).join('');
   document.querySelector('#candidate-prices').innerHTML=prices.candidates.map(render).join('');
